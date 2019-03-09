@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,139 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstrumentChoiceQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5U9-21-0XN" userLabel="Question Label">
+                                <rect key="frame" x="299" y="45" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NNg-jx-23G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IaD-Q2-ZYJ" userLabel="Questions">
+                                <rect key="frame" x="0.0" y="120" width="667" height="225"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-6Q-wig" userLabel="qn 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="56.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-YR-o1K" userLabel="radioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
+                                                <state key="normal" image="radio_button"/>
+                                                <connections>
+                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQ2-IN-AdW"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-Qo-c6P" userLabel="answerText">
+                                                <rect key="frame" x="74" y="0.0" width="593" height="56.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="cbC-Qo-c6P" firstAttribute="width" secondItem="YeF-YR-o1K" secondAttribute="width" multiplier="8:1" id="cKT-dA-b7x"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-bG-biI" userLabel="qn 1">
+                                        <rect key="frame" x="0.0" y="56.5" width="667" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-af-JcZ" userLabel="radioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
+                                                <state key="normal" image="radio_button"/>
+                                                <connections>
+                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UV1-yp-HiX"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-dP-j0z" userLabel="answerText">
+                                                <rect key="frame" x="74" y="0.0" width="593" height="56"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="rHj-dP-j0z" firstAttribute="width" secondItem="ShL-af-JcZ" secondAttribute="width" multiplier="8:1" id="nsa-UY-NSA"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="r1s-Vs-aFC" userLabel="qn 1">
+                                        <rect key="frame" x="0.0" y="112.5" width="667" height="56.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-EV-suN" userLabel="radioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
+                                                <state key="normal" image="radio_button"/>
+                                                <connections>
+                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TnV-xI-SYw"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2B-Rp-5n8" userLabel="answerText">
+                                                <rect key="frame" x="74" y="0.0" width="593" height="56.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="P2B-Rp-5n8" firstAttribute="width" secondItem="kGE-EV-suN" secondAttribute="width" multiplier="8:1" id="Kmy-U3-eOm"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wif-n4-gam" userLabel="qn 1">
+                                        <rect key="frame" x="0.0" y="169" width="667" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-Tj-VM3" userLabel="radioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
+                                                <state key="normal" image="radio_button"/>
+                                                <connections>
+                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5YX-rk-I5H"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVA-H4-anU" userLabel="answerText">
+                                                <rect key="frame" x="74" y="0.0" width="593" height="56"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bVA-H4-anU" firstAttribute="width" secondItem="vYR-Tj-VM3" secondAttribute="width" multiplier="8:1" id="kQg-De-dlH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IaD-Q2-ZYJ" firstAttribute="top" secondItem="5U9-21-0XN" secondAttribute="bottom" constant="45" id="9Gb-W1-vAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IaD-Q2-ZYJ" secondAttribute="bottom" constant="30" id="KYm-NK-1g8"/>
+                            <constraint firstItem="5U9-21-0XN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UM3-UA-eBl"/>
+                            <constraint firstItem="IaD-Q2-ZYJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z0s-hN-jgG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IaD-Q2-ZYJ" secondAttribute="trailing" id="dIw-9W-i3B"/>
+                            <constraint firstItem="5U9-21-0XN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="dhi-Ki-4yY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="5U9-21-0XN" id="XYQ-by-CVO"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="YeF-YR-o1K" collectionClass="NSMutableArray" id="MPI-CM-MQY"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="ShL-af-JcZ" collectionClass="NSMutableArray" id="mQl-P7-4Lq"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="kGE-EV-suN" collectionClass="NSMutableArray" id="s3e-L8-52o"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="vYR-Tj-VM3" collectionClass="NSMutableArray" id="USh-f7-8Y3"/>
+                        <outletCollection property="answerTextOutletCollection" destination="cbC-Qo-c6P" collectionClass="NSMutableArray" id="EdC-Lp-DVl"/>
+                        <outletCollection property="answerTextOutletCollection" destination="rHj-dP-j0z" collectionClass="NSMutableArray" id="t66-tA-eGe"/>
+                        <outletCollection property="answerTextOutletCollection" destination="P2B-Rp-5n8" collectionClass="NSMutableArray" id="Y8Q-rW-3AI"/>
+                        <outletCollection property="answerTextOutletCollection" destination="bVA-H4-anU" collectionClass="NSMutableArray" id="QSt-X6-gYs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.23538230884558" y="48.799999999999997"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="radio_button" width="42.75" height="42.75"/>
+    </resources>
 </document>

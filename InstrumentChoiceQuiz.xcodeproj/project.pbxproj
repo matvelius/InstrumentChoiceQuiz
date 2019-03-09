@@ -12,6 +12,8 @@
 		D7744A0C2234107500CECB13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7744A0A2234107500CECB13 /* Main.storyboard */; };
 		D7744A0E2234107A00CECB13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7744A0D2234107A00CECB13 /* Assets.xcassets */; };
 		D7744A112234107A00CECB13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7744A0F2234107A00CECB13 /* LaunchScreen.storyboard */; };
+		D7744A19223410AD00CECB13 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744A18223410AD00CECB13 /* DataModels.swift */; };
+		D7744A1B2234196E00CECB13 /* QuestionAnswerLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744A1A2234196E00CECB13 /* QuestionAnswerLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D7744A0D2234107A00CECB13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7744A102234107A00CECB13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7744A122234107A00CECB13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7744A18223410AD00CECB13 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		D7744A1A2234196E00CECB13 /* QuestionAnswerLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				D7744A062234107500CECB13 /* AppDelegate.swift */,
 				D7744A082234107500CECB13 /* ViewController.swift */,
+				D7744A18223410AD00CECB13 /* DataModels.swift */,
+				D7744A1A2234196E00CECB13 /* QuestionAnswerLibrary.swift */,
 				D7744A0A2234107500CECB13 /* Main.storyboard */,
 				D7744A0D2234107A00CECB13 /* Assets.xcassets */,
 				D7744A0F2234107A00CECB13 /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7744A19223410AD00CECB13 /* DataModels.swift in Sources */,
 				D7744A092234107500CECB13 /* ViewController.swift in Sources */,
 				D7744A072234107500CECB13 /* AppDelegate.swift in Sources */,
+				D7744A1B2234196E00CECB13 /* QuestionAnswerLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AN8H79QZL4;
 				INFOPLIST_FILE = InstrumentChoiceQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AN8H79QZL4;
 				INFOPLIST_FILE = InstrumentChoiceQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
