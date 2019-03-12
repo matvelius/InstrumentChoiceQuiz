@@ -14,10 +14,19 @@ enum QuestionType {
     case single, multiple, ranged
 }
 
+//struct Question: Equatable, Hashable {
 struct Question {
     var text: String
     var type: QuestionType
     var answers: [Answer]
+    
+//    static func == (lhs: Question, rhs: Question) -> Bool {
+//        return lhs.text == rhs.text
+//    }
+//
+//    var hashValue: Int {
+//        return text.hashValue ^ type.hashValue
+//    }
 }
 
 // ANSWERS
@@ -25,7 +34,7 @@ struct Question {
 // CATEGORIES:
 
 enum InstrumentFamily {
-    case strings, woodwinds, brass, percussion, piano, guitar, voice
+    case strings, woodwinds, brass, drums, percussion, piano, guitar, voice
 }
 
 enum Genre {
@@ -97,7 +106,8 @@ struct Answer {
     }
 }
 
-
+//var selectedAnswers = [Question:Answer]()
+var correlationsLog = [InstrumentFamily: Int]()
 
 //// SELECTING CORRELATION FOR EACH ANSWER
 

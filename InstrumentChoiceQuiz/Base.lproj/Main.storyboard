@@ -33,7 +33,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-6Q-wig" userLabel="qn 1">
                                         <rect key="frame" x="0.0" y="0.0" width="667" height="56.5"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-YR-o1K" userLabel="radioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-YR-o1K" userLabel="radioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
                                                 <state key="normal" image="radio_button"/>
                                                 <connections>
@@ -54,7 +54,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-bG-biI" userLabel="qn 1">
                                         <rect key="frame" x="0.0" y="56.5" width="667" height="56"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-af-JcZ" userLabel="radioButton">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-af-JcZ" userLabel="radioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
                                                 <state key="normal" image="radio_button"/>
                                                 <connections>
@@ -75,7 +75,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="r1s-Vs-aFC" userLabel="qn 1">
                                         <rect key="frame" x="0.0" y="112.5" width="667" height="56.5"/>
                                         <subviews>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-EV-suN" userLabel="radioButton">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-EV-suN" userLabel="radioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
                                                 <state key="normal" image="radio_button"/>
                                                 <connections>
@@ -96,7 +96,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wif-n4-gam" userLabel="qn 1">
                                         <rect key="frame" x="0.0" y="169" width="667" height="56"/>
                                         <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-Tj-VM3" userLabel="radioButton">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-Tj-VM3" userLabel="radioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
                                                 <state key="normal" image="radio_button"/>
                                                 <connections>
