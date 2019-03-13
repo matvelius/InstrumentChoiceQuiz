@@ -92,5 +92,128 @@ var questions: [Question] = [
                 ) // end answer
         ] // end of Answer array
     ), // end of current question
+    
+    Question(text: "How do you feel about new experiences?",
+             type: .single,
+             answers: [
+                Answer(answerOption: "No thanks, I'd rather stick to what I know",
+                       primaryInstrument: .piano,
+                       primaryInstrumentScore: 10,
+                       primaryGenre: .pop,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .solo,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I'm ok with trying something new once in a while",
+                       primaryInstrument: .voice,
+                       primaryInstrumentScore: 7,
+                       primaryGenre: .rock,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .smallGroup,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I love new experiences!",
+                       primaryInstrument: .brass,
+                       primaryInstrumentScore: 9,
+                       primaryGenre: .jazz,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .smallGroup,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "If it were possible, I'd do something new every single day!",
+                       primaryInstrument: .brass,
+                       primaryInstrumentScore: 8,
+                       primaryGenre: .classical,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .largeEnsemble,
+                       primaryParticipationScore: 10
+                ) // end answer
+        ] // end of Answer array
+    ), // end of current question
+    
+    Question(text: "Do you have a good sense of humor?",
+             type: .single,
+             answers: [
+                Answer(answerOption: "What's humor?",
+                       primaryInstrument: .strings,
+                       primaryInstrumentScore: 10,
+                       primaryGenre: .classical,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .largeEnsemble,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I like to laugh, but no one ever laughs at my jokes",
+                       primaryInstrument: .voice,
+                       primaryInstrumentScore: 7,
+                       primaryGenre: .pop,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .solo,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I can crack a joke once in a while",
+                       primaryInstrument: .woodwinds,
+                       primaryInstrumentScore: 9,
+                       primaryGenre: .jazz,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .largeEnsemble,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I'm basically a stand-up comedian!",
+                       primaryInstrument: .brass,
+                       primaryInstrumentScore: 10,
+                       primaryGenre: .jazz,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .largeEnsemble,
+                       primaryParticipationScore: 10
+                ) // end answer
+        ] // end of Answer array
+    ), // end of current question
+    
+    Question(text: "How do you feel about people in position of authority?",
+             type: .single,
+             answers: [
+                Answer(answerOption: "I have no respect for authority!",
+                       primaryInstrument: .guitar,
+                       primaryInstrumentScore: 10,
+                       primaryGenre: .rock,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .smallGroup,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I'll listen, but only if they're bigger than me",
+                       primaryInstrument: .brass,
+                       primaryInstrumentScore: 7,
+                       primaryGenre: .classical,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .largeEnsemble,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I always respect people who are older and/or are in position of power",
+                       primaryInstrument: .woodwinds,
+                       primaryInstrumentScore: 7,
+                       primaryGenre: .classical,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .largeEnsemble,
+                       primaryParticipationScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "I never stand up for myself",
+                       primaryInstrument: .strings,
+                       primaryInstrumentScore: 9,
+                       primaryGenre: .classical,
+                       primaryGenreScore: 10,
+                       primaryParticipation: .solo,
+                       primaryParticipationScore: 10
+                ) // end answer
+        ] // end of Answer array
+    ), // end of current question
 ] // end of Question array
 

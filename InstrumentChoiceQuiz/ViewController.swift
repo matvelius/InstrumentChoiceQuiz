@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var answerTextOutletCollection: [UILabel]!
     
+    @IBOutlet var leftLabelOutletCollection: [UILabel]!
+    
+    @IBOutlet weak var rightLabelOutletCollection: UILabel!
+    
     @IBAction func radioButtonPressed(_ sender: UIButton) {
         
         // show selected choice
@@ -87,5 +91,6 @@ class ViewController: UIViewController {
         }
     }
 
+    
+    
 }
-

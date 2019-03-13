@@ -18,126 +18,238 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5U9-21-0XN" userLabel="Question Label">
-                                <rect key="frame" x="299" y="45" width="69" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NNg-jx-23G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IaD-Q2-ZYJ" userLabel="Questions">
-                                <rect key="frame" x="0.0" y="120" width="667" height="225"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEt-rc-2rW" userLabel="Main Stack">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-6Q-wig" userLabel="qn 1">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="56.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-YR-o1K" userLabel="radioButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
-                                                <state key="normal" image="radio_button"/>
-                                                <connections>
-                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQ2-IN-AdW"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-Qo-c6P" userLabel="answerText">
-                                                <rect key="frame" x="74" y="0.0" width="593" height="56.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMl-fj-U1g" userLabel="Question Label">
+                                        <rect key="frame" x="276" y="45" width="115" height="30"/>
                                         <constraints>
-                                            <constraint firstItem="cbC-Qo-c6P" firstAttribute="width" secondItem="YeF-YR-o1K" secondAttribute="width" multiplier="8:1" id="cKT-dA-b7x"/>
+                                            <constraint firstAttribute="height" constant="30" id="det-Kr-MNZ"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-bG-biI" userLabel="qn 1">
-                                        <rect key="frame" x="0.0" y="56.5" width="667" height="56"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-hh-4YV" userLabel="Text Questions">
+                                        <rect key="frame" x="0.0" y="120" width="667" height="225"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-af-JcZ" userLabel="radioButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
-                                                <state key="normal" image="radio_button"/>
-                                                <connections>
-                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UV1-yp-HiX"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-dP-j0z" userLabel="answerText">
-                                                <rect key="frame" x="74" y="0.0" width="593" height="56"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Tev-h0-F5q" userLabel="qn 1">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XN2-r0-jnw" userLabel="radioButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
+                                                        <state key="normal" image="radio_button"/>
+                                                        <connections>
+                                                            <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z84-Xk-WMY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAw-b3-3mg" userLabel="answerText">
+                                                        <rect key="frame" x="74" y="0.0" width="593" height="56.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-nJ-UM3">
+                                                        <rect key="frame" x="667" y="0.0" width="0.0" height="56.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="SAw-b3-3mg" firstAttribute="width" secondItem="XN2-r0-jnw" secondAttribute="width" multiplier="8:1" id="nio-YU-OXX"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="EIg-C4-OFe" userLabel="qn 1">
+                                                <rect key="frame" x="0.0" y="56.5" width="667" height="56"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T94-O9-9h2" userLabel="radioButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
+                                                        <state key="normal" image="radio_button"/>
+                                                        <connections>
+                                                            <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OV7-eF-hJV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K89-Ab-Y9J" userLabel="answerText">
+                                                        <rect key="frame" x="74" y="0.0" width="593" height="56"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="K89-Ab-Y9J" firstAttribute="width" secondItem="T94-O9-9h2" secondAttribute="width" multiplier="8:1" id="0fJ-xc-ep0"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ntM-WC-eYX" userLabel="qn 1">
+                                                <rect key="frame" x="0.0" y="112.5" width="667" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-5N-FlO" userLabel="radioButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
+                                                        <state key="normal" image="radio_button"/>
+                                                        <connections>
+                                                            <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBc-6J-YDp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGd-HA-VpN" userLabel="answerText">
+                                                        <rect key="frame" x="74" y="0.0" width="593" height="56.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="eGd-HA-VpN" firstAttribute="width" secondItem="fmw-5N-FlO" secondAttribute="width" multiplier="8:1" id="Ehl-4D-8xs"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zRy-kd-feK" userLabel="qn 1">
+                                                <rect key="frame" x="0.0" y="169" width="667" height="56"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTv-4h-9sW" userLabel="radioButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
+                                                        <state key="normal" image="radio_button"/>
+                                                        <connections>
+                                                            <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XVD-PH-Pzu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-7r-9IF" userLabel="answerText">
+                                                        <rect key="frame" x="74" y="0.0" width="593" height="56"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Be6-7r-9IF" firstAttribute="width" secondItem="tTv-4h-9sW" secondAttribute="width" multiplier="8:1" id="PbW-Rs-WeB"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="213" translatesAutoresizingMaskIntoConstraints="NO" id="iVN-ge-Ces" userLabel="Slider Questions">
+                                        <rect key="frame" x="0.0" y="120" width="667" height="255"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sKE-l7-7qD" userLabel="left labels">
+                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="255"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alK-NL-PoO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="64"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49n-uP-eG5">
+                                                        <rect key="frame" x="0.0" y="64" width="120.5" height="63.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlc-6W-6M3">
+                                                        <rect key="frame" x="0.0" y="127.5" width="120.5" height="64"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3b-lu-ZjO">
+                                                        <rect key="frame" x="0.0" y="191.5" width="120.5" height="63.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pGt-Cr-4yL" userLabel="sliders">
+                                                <rect key="frame" x="333.5" y="0.0" width="0.0" height="255"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JJB-rt-nKO">
+                                                        <rect key="frame" x="-2" y="0.0" width="4" height="65"/>
+                                                    </slider>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MW9-qe-5hA">
+                                                        <rect key="frame" x="-2" y="64" width="4" height="64.5"/>
+                                                    </slider>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-eB-fLb">
+                                                        <rect key="frame" x="-2" y="127.5" width="4" height="65"/>
+                                                    </slider>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="idS-Ov-9X0">
+                                                        <rect key="frame" x="-2" y="191.5" width="4" height="64.5"/>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="09K-cA-qz4" userLabel="right labels">
+                                                <rect key="frame" x="546.5" y="0.0" width="120.5" height="255"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiC-uB-x4t">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="64"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br0-M5-Yyc">
+                                                        <rect key="frame" x="0.0" y="64" width="120.5" height="63.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2av-Ap-XeY">
+                                                        <rect key="frame" x="0.0" y="127.5" width="120.5" height="64"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sw-AL-3Ra">
+                                                        <rect key="frame" x="0.0" y="191.5" width="120.5" height="63.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <viewLayoutGuide key="safeArea" id="ViV-ac-iTL"/>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="rHj-dP-j0z" firstAttribute="width" secondItem="ShL-af-JcZ" secondAttribute="width" multiplier="8:1" id="nsa-UY-NSA"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="r1s-Vs-aFC" userLabel="qn 1">
-                                        <rect key="frame" x="0.0" y="112.5" width="667" height="56.5"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-EV-suN" userLabel="radioButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56.5"/>
-                                                <state key="normal" image="radio_button"/>
-                                                <connections>
-                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TnV-xI-SYw"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2B-Rp-5n8" userLabel="answerText">
-                                                <rect key="frame" x="74" y="0.0" width="593" height="56.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="P2B-Rp-5n8" firstAttribute="width" secondItem="kGE-EV-suN" secondAttribute="width" multiplier="8:1" id="Kmy-U3-eOm"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wif-n4-gam" userLabel="qn 1">
-                                        <rect key="frame" x="0.0" y="169" width="667" height="56"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-Tj-VM3" userLabel="radioButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
-                                                <state key="normal" image="radio_button"/>
-                                                <connections>
-                                                    <action selector="radioButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5YX-rk-I5H"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVA-H4-anU" userLabel="answerText">
-                                                <rect key="frame" x="74" y="0.0" width="593" height="56"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="bVA-H4-anU" firstAttribute="width" secondItem="vYR-Tj-VM3" secondAttribute="width" multiplier="8:1" id="kQg-De-dlH"/>
+                                            <constraint firstItem="09K-cA-qz4" firstAttribute="width" secondItem="sKE-l7-7qD" secondAttribute="width" id="F3j-8o-Jej"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iVN-ge-Ces" firstAttribute="top" secondItem="xMl-fj-U1g" secondAttribute="bottom" constant="45" id="D21-SF-ZdH"/>
+                                    <constraint firstItem="Zk7-fA-KEu" firstAttribute="bottom" secondItem="vmi-hh-4YV" secondAttribute="bottom" constant="30" id="FPc-o3-EZX"/>
+                                    <constraint firstItem="Zk7-fA-KEu" firstAttribute="trailing" secondItem="iVN-ge-Ces" secondAttribute="trailing" id="FR4-RI-6CY"/>
+                                    <constraint firstItem="vmi-hh-4YV" firstAttribute="top" secondItem="xMl-fj-U1g" secondAttribute="bottom" constant="45" id="O0s-Qx-vqd"/>
+                                    <constraint firstItem="Zk7-fA-KEu" firstAttribute="trailing" secondItem="vmi-hh-4YV" secondAttribute="trailing" id="OiP-mT-8aN"/>
+                                    <constraint firstItem="xMl-fj-U1g" firstAttribute="centerX" secondItem="NEt-rc-2rW" secondAttribute="centerX" id="hfj-wi-uO0"/>
+                                    <constraint firstItem="iVN-ge-Ces" firstAttribute="leading" secondItem="Zk7-fA-KEu" secondAttribute="leading" id="kRa-En-RBW"/>
+                                    <constraint firstItem="xMl-fj-U1g" firstAttribute="top" secondItem="Zk7-fA-KEu" secondAttribute="top" constant="45" id="l9x-Fs-4ya"/>
+                                    <constraint firstItem="vmi-hh-4YV" firstAttribute="leading" secondItem="Zk7-fA-KEu" secondAttribute="leading" id="lVS-XP-9aT"/>
+                                    <constraint firstItem="Zk7-fA-KEu" firstAttribute="bottom" secondItem="iVN-ge-Ces" secondAttribute="bottom" id="q5M-66-KFS"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="Zk7-fA-KEu"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IaD-Q2-ZYJ" firstAttribute="top" secondItem="5U9-21-0XN" secondAttribute="bottom" constant="45" id="9Gb-W1-vAW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IaD-Q2-ZYJ" secondAttribute="bottom" constant="30" id="KYm-NK-1g8"/>
-                            <constraint firstItem="5U9-21-0XN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UM3-UA-eBl"/>
-                            <constraint firstItem="IaD-Q2-ZYJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z0s-hN-jgG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IaD-Q2-ZYJ" secondAttribute="trailing" id="dIw-9W-i3B"/>
-                            <constraint firstItem="5U9-21-0XN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="dhi-Ki-4yY"/>
+                            <constraint firstItem="NEt-rc-2rW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Oy5-cj-pq7"/>
+                            <constraint firstItem="NEt-rc-2rW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cLF-OL-Jax"/>
+                            <constraint firstItem="NEt-rc-2rW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ncq-rV-Vfm"/>
+                            <constraint firstItem="NEt-rc-2rW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pbA-ml-5o5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="questionLabel" destination="5U9-21-0XN" id="XYQ-by-CVO"/>
-                        <outletCollection property="radioButtonsOutletCollection" destination="YeF-YR-o1K" collectionClass="NSMutableArray" id="MPI-CM-MQY"/>
-                        <outletCollection property="radioButtonsOutletCollection" destination="ShL-af-JcZ" collectionClass="NSMutableArray" id="mQl-P7-4Lq"/>
-                        <outletCollection property="radioButtonsOutletCollection" destination="kGE-EV-suN" collectionClass="NSMutableArray" id="s3e-L8-52o"/>
-                        <outletCollection property="radioButtonsOutletCollection" destination="vYR-Tj-VM3" collectionClass="NSMutableArray" id="USh-f7-8Y3"/>
-                        <outletCollection property="answerTextOutletCollection" destination="cbC-Qo-c6P" collectionClass="NSMutableArray" id="EdC-Lp-DVl"/>
-                        <outletCollection property="answerTextOutletCollection" destination="rHj-dP-j0z" collectionClass="NSMutableArray" id="t66-tA-eGe"/>
-                        <outletCollection property="answerTextOutletCollection" destination="P2B-Rp-5n8" collectionClass="NSMutableArray" id="Y8Q-rW-3AI"/>
-                        <outletCollection property="answerTextOutletCollection" destination="bVA-H4-anU" collectionClass="NSMutableArray" id="QSt-X6-gYs"/>
+                        <outlet property="questionLabel" destination="xMl-fj-U1g" id="jLy-RE-DRB"/>
+                        <outlet property="rightLabelOutletCollection" destination="4Sw-AL-3Ra" id="xGd-Xz-T5d"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="XN2-r0-jnw" collectionClass="NSMutableArray" id="LkA-mn-32Q"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="T94-O9-9h2" collectionClass="NSMutableArray" id="hzn-Av-aUU"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="fmw-5N-FlO" collectionClass="NSMutableArray" id="sbY-Ix-89h"/>
+                        <outletCollection property="radioButtonsOutletCollection" destination="tTv-4h-9sW" collectionClass="NSMutableArray" id="YCN-hs-44u"/>
+                        <outletCollection property="answerTextOutletCollection" destination="SAw-b3-3mg" collectionClass="NSMutableArray" id="beH-vd-Kn4"/>
+                        <outletCollection property="answerTextOutletCollection" destination="K89-Ab-Y9J" collectionClass="NSMutableArray" id="Ptw-ax-AZN"/>
+                        <outletCollection property="answerTextOutletCollection" destination="eGd-HA-VpN" collectionClass="NSMutableArray" id="kFL-gR-rP0"/>
+                        <outletCollection property="answerTextOutletCollection" destination="Be6-7r-9IF" collectionClass="NSMutableArray" id="LOk-fO-7Kk"/>
+                        <outletCollection property="leftLabelOutletCollection" destination="alK-NL-PoO" collectionClass="NSMutableArray" id="zbo-qd-4pe"/>
+                        <outletCollection property="leftLabelOutletCollection" destination="49n-uP-eG5" collectionClass="NSMutableArray" id="5uM-yg-BWd"/>
+                        <outletCollection property="leftLabelOutletCollection" destination="qlc-6W-6M3" collectionClass="NSMutableArray" id="GYS-fl-wEH"/>
+                        <outletCollection property="leftLabelOutletCollection" destination="W3b-lu-ZjO" collectionClass="NSMutableArray" id="R3D-7I-gGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
