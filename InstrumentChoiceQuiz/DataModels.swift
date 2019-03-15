@@ -51,13 +51,13 @@ enum Participation {
 struct Answer {
     
     // answer types: text, audio sample selection, image?, video?
-    var answerOption: Any
+    var answerOption: Any?
     
     // correlations & weight
     // instruments:
     
-    var primaryInstrument: InstrumentFamily
-    var primaryInstrumentScore: Int
+    var primaryInstrument: InstrumentFamily?
+    var primaryInstrumentScore: Int?
     
     var secondaryInstrument: InstrumentFamily?
     var secondaryInstrumentScore: Int?
@@ -67,8 +67,8 @@ struct Answer {
     
     // genres
     
-    var primaryGenre: Genre
-    var primaryGenreScore: Int
+    var primaryGenre: Genre?
+    var primaryGenreScore: Int?
     
     var secondaryGenre: Genre?
     var secondaryGenreScore: Int?
@@ -78,8 +78,8 @@ struct Answer {
     
     // participation options
     
-    var primaryParticipation: Participation
-    var primaryParticipationScore: Int
+    var primaryParticipation: Participation?
+    var primaryParticipationScore: Int?
     
     var secondaryParticipation: Participation?
     var secondaryParticipationScore: Int?
@@ -87,14 +87,23 @@ struct Answer {
     var tertiaryParticipation: Participation?
     var tertiaryParticipationScore: Int?
     
+    var leftSideMeaning: String?
+    var leftSideScore: Int?
+    var rightSideMeaning: String?
+    var rightSideScore: Int?
+    
+    var leftIndicator: Any?
+    var rightIndicator: Any?
+    
     // only require the primary categories & scores
-    init(answerOption: Any,
-         primaryInstrument: InstrumentFamily,
-         primaryInstrumentScore: Int,
-         primaryGenre: Genre,
-         primaryGenreScore: Int,
-         primaryParticipation: Participation,
-         primaryParticipationScore: Int) {
+    init(answerOption: Any?,
+         primaryInstrument: InstrumentFamily?,
+         primaryInstrumentScore: Int?,
+         primaryGenre: Genre?,
+         primaryGenreScore: Int?,
+         primaryParticipation: Participation?,
+         primaryParticipationScore: Int?
+         ) {
         
         self.answerOption = answerOption
         self.primaryInstrument = primaryInstrument
@@ -103,10 +112,27 @@ struct Answer {
         self.primaryGenreScore = primaryGenreScore
         self.primaryParticipation = primaryParticipation
         self.primaryParticipationScore = primaryParticipationScore
+        
     }
+    
+    init(leftSideMeaning: String?,
+         leftSideScore: Int?,
+         rightSideMeaning: String?,
+         rightSideScore: Int?
+        ) {
+        
+        self.leftSideMeaning = leftSideMeaning
+        self.leftSideScore = leftSideScore
+        self.rightSideMeaning = rightSideMeaning
+        self.rightSideScore = rightSideScore
+        
+    }
+    
 }
 
 //var selectedAnswers = [Question:Answer]()
+
+// store correlations
 var correlationsLog = [InstrumentFamily: Int]()
 
 //// SELECTING CORRELATION FOR EACH ANSWER

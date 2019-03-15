@@ -17,7 +17,20 @@ class ViewController: UIViewController {
     
     @IBOutlet var leftLabelOutletCollection: [UILabel]!
     
-    @IBOutlet weak var rightLabelOutletCollection: UILabel!
+    @IBOutlet var rightLabelOutletCollection: [UILabel]!
+    
+    @IBOutlet var sliderOutletCollection: [UISlider]!
+    
+    @IBAction func sliderMoved(_ slider: UISlider) {
+        
+        print(slider.tag)
+        print(slider.value)
+        
+    }
+    @IBOutlet weak var textQuestionsStack: UIStackView!
+    
+    @IBOutlet weak var sliderQuestionsStack: UIStackView!
+
     
     @IBAction func radioButtonPressed(_ sender: UIButton) {
         
@@ -30,7 +43,7 @@ class ViewController: UIViewController {
         
         let primaryInstrumentCorrelationScore = questions[questionIndex].answers[sender.tag].primaryInstrumentScore
         
-        correlationsLog[primaryInstrumentCorrelation] = primaryInstrumentCorrelationScore
+        correlationsLog[primaryInstrumentCorrelation!] = primaryInstrumentCorrelationScore
         
         var currentHighScore = 0
         var currentInstrumentOfChoice = "piano"
@@ -78,8 +91,32 @@ class ViewController: UIViewController {
         questionLabel.text = questions[questionIndex].text
         
         // retrieve the answer options from QuestionAnswerLibrary
-        for answer in questions[questionIndex].answers.enumerated() {
-            answerTextOutletCollection[answer.offset].text = answer.element.answerOption as? String
+        switch questions[questionIndex].type {
+        
+        case .single:
+            
+            textQuestionsStack.alpha = 1
+            sliderQuestionsStack.alpha = 0
+        
+            for answer in questions[questionIndex].answers.enumerated() {
+                answerTextOutletCollection[answer.offset].text = answer.element.answerOption as? String
+            }
+            
+        case .ranged:
+            
+            textQuestionsStack.alpha = 0
+            sliderQuestionsStack.alpha = 1
+            
+            for leftChoice in questions[questionIndex].answers.enumerated() {
+                leftLabelOutletCollection[leftChoice.offset].text = leftChoice.element.leftSideMeaning
+            }
+            
+            for rightChoice in questions[questionIndex].answers.enumerated() {
+                rightLabelOutletCollection[rightChoice.offset].text = rightChoice.element.rightSideMeaning
+            }
+            
+        case .multiple: break
+            
         }
         
     }

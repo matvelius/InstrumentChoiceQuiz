@@ -93,6 +93,35 @@ var questions: [Question] = [
         ] // end of Answer array
     ), // end of current question
     
+    Question(text: "What kind of characteristics do you usually like in your music?",
+             type: .ranged,
+             answers: [
+                Answer(leftSideMeaning: "Soft",
+                       leftSideScore: 10,
+                       rightSideMeaning: "Loud",
+                       rightSideScore: 10
+                ), // end answer
+                
+                Answer(leftSideMeaning: "Slow",
+                       leftSideScore: 10,
+                       rightSideMeaning: "Fast",
+                       rightSideScore: 10
+                ), // end answer
+                
+                Answer(leftSideMeaning: "Instrumental",
+                       leftSideScore: 10,
+                       rightSideMeaning: "Has vocals",
+                       rightSideScore: 10
+                ), // end answer
+                
+                Answer(leftSideMeaning: "Acoustic",
+                       leftSideScore: 10,
+                       rightSideMeaning: "Electronic",
+                       rightSideScore: 10
+                ), // end answer
+        ] // end of Answer array
+    ), // end of current question
+    
     Question(text: "How do you feel about new experiences?",
              type: .single,
              answers: [
