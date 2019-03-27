@@ -10,9 +10,11 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
 
+    @IBOutlet var instrumentFamilyCorrelationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        instrumentFamilyCorrelationLabel.text = "\(instrumentFamilyCorrelations[.woodwinds])" 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -342,6 +342,9 @@
                             <outlet property="delegate" destination="NNJ-wK-WEo" id="lPN-dN-uit"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="instrumentFamilyCorrelationLabel" destination="gcx-3p-ctj" id="0BA-H5-GSj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woQ-XU-RyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

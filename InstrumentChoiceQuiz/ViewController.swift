@@ -222,13 +222,13 @@ class ViewController: UIViewController {
             textQuestionsStack.alpha = 0
             sliderQuestionsStack.alpha = 1
             
-//            for leftChoice in questions[questionIndex].answers.enumerated() {
-//                leftLabelOutletCollection[leftChoice.offset].text = leftChoice.element.leftSideMeaning
-//            }
-//            
-//            for rightChoice in questions[questionIndex].answers.enumerated() {
-//                rightLabelOutletCollection[rightChoice.offset].text = rightChoice.element.rightSideMeaning
-//            }
+            for leftChoice in questions[questionIndex].answers.enumerated() {
+                leftLabelOutletCollection[leftChoice.offset].text = leftChoice.element.leftSideMeaning as? String
+            }
+            
+            for rightChoice in questions[questionIndex].answers.enumerated() {
+                rightLabelOutletCollection[rightChoice.offset].text = rightChoice.element.rightSideMeaning as? String
+            }
             
         case .multiple: break
             
