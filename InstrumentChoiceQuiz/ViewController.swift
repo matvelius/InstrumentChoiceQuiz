@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     @IBAction func submitButtonForSliders(_ sender: UIButton) {
         print("slider question submitted!")
+        nextQuestionOrDone()
     }
     
     @IBOutlet weak var textQuestionsStack: UIStackView!
@@ -165,19 +166,10 @@ class ViewController: UIViewController {
         
 //        print(correlationsLog)
         
-        // pause, then go to next question
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute:{
-            
-            // check if we've run out of questions yet
-            if self.questionIndex < questions.endIndex - 1 {
-                self.questionIndex += 1
-                self.resetRadioButtons()
-                self.loadNextQuestion()
-            } else {
-                print("done!")
-            }
-            
-        })
+        // keep going or finish:
+        nextQuestionOrDone()
+        
+        
         
     }
     
@@ -187,6 +179,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         loadNextQuestion()
+    }
+    
+    func nextQuestionOrDone() {
+        // pause, then go to next question
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute:{
+            
+            // check if we've run out of questions yet
+            if self.questionIndex < questions.endIndex - 1 {
+                self.questionIndex += 1
+                self.resetRadioButtons()
+                self.loadNextQuestion()
+            } else {
+                self.performSegue(withIdentifier: "showResults", sender: nil)
+                print("done!")
+            }
+            
+        })
     }
     
     func loadNextQuestion() {

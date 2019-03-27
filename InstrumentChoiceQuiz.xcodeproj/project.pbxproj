@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D76784DF224B9F730077669A /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76784DE224B9F730077669A /* ResultsTableViewController.swift */; };
 		D7744A072234107500CECB13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744A062234107500CECB13 /* AppDelegate.swift */; };
 		D7744A092234107500CECB13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744A082234107500CECB13 /* ViewController.swift */; };
 		D7744A0C2234107500CECB13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7744A0A2234107500CECB13 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D76784DE224B9F730077669A /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		D7744A032234107500CECB13 /* InstrumentChoiceQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstrumentChoiceQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7744A062234107500CECB13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7744A082234107500CECB13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D7744A18223410AD00CECB13 /* DataModels.swift */,
 				D7744A1A2234196E00CECB13 /* QuestionAnswerLibrary.swift */,
 				D7744A0A2234107500CECB13 /* Main.storyboard */,
+				D76784DE224B9F730077669A /* ResultsTableViewController.swift */,
 				D7744A0D2234107A00CECB13 /* Assets.xcassets */,
 				D7744A0F2234107A00CECB13 /* LaunchScreen.storyboard */,
 				D7744A122234107A00CECB13 /* Info.plist */,
@@ -145,6 +148,7 @@
 				D7744A092234107500CECB13 /* ViewController.swift in Sources */,
 				D7744A072234107500CECB13 /* AppDelegate.swift in Sources */,
 				D7744A1B2234196E00CECB13 /* QuestionAnswerLibrary.swift in Sources */,
+				D76784DF224B9F730077669A /* ResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
