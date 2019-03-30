@@ -14,7 +14,21 @@ class ResultsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        instrumentFamilyCorrelationLabel.text = "\(instrumentFamilyCorrelations[.woodwinds])" 
+        
+        var topInstrumentFamilyCorrelationScore = 0
+        var topInstrumentFamilyCorrelation: InstrumentFamily = .woodwinds
+        
+        for instrumentFamilyCorrelation in instrumentFamilyCorrelations {
+            if instrumentFamilyCorrelation.value > topInstrumentFamilyCorrelationScore {
+                print(instrumentFamilyCorrelation)
+                topInstrumentFamilyCorrelation = instrumentFamilyCorrelation.key
+                topInstrumentFamilyCorrelationScore = instrumentFamilyCorrelation.value
+            }
+        }
+        
+        print(topInstrumentFamilyCorrelation)
+        
+//        instrumentFamilyCorrelationLabel.text = "\(topInstrumentFamilyCorrelation)"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
