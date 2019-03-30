@@ -219,15 +219,17 @@ class ViewController: UIViewController {
             
         case .ranged:
             
+            print("ranged question!")
+            
             textQuestionsStack.alpha = 0
             sliderQuestionsStack.alpha = 1
             
             for leftChoice in questions[questionIndex].answers.enumerated() {
-                leftLabelOutletCollection[leftChoice.offset].text = leftChoice.element.leftSideMeaning as? String
+                leftLabelOutletCollection[leftChoice.offset].text = leftChoice.element.leftSideLabel
             }
             
             for rightChoice in questions[questionIndex].answers.enumerated() {
-                rightLabelOutletCollection[rightChoice.offset].text = rightChoice.element.rightSideMeaning as? String
+                rightLabelOutletCollection[rightChoice.offset].text = rightChoice.element.rightSideLabel
             }
             
         case .multiple: break
