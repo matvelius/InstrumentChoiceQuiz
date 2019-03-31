@@ -41,8 +41,19 @@ var keyboardsCorrelations = [Keyboards: Int]()
 
 // CATEGORIES:
 
-enum InstrumentFamily {
+enum InstrumentFamily: CustomStringConvertible {
     case strings, woodwinds, brass, percussion, keyboards, voice
+    
+    var description: String {
+        switch self {
+        case .strings: return "string"
+        case .woodwinds: return "woodwind"
+        case .brass: return "brass"
+        case .percussion: return "percussion"
+        case .keyboards: return "keyboard"
+        case .voice: return "voice"
+        }
+    }
 }
 
 enum Strings {

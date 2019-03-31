@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     
     @IBAction func sliderMoved(_ slider: UISlider) {
         
-        print(slider.tag)
-        print(slider.value)
+//        print(slider.tag)
+//        print(slider.value)
         
     }
     
     @IBAction func submitButtonForSliders(_ sender: UIButton) {
-        print("slider question submitted!")
+//        print("slider question submitted!")
         nextQuestionOrDone()
     }
     
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         if instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!] != nil {
             instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!] = (instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!]! + primaryInstrumentFamilyCorrelationScore!) / 2
             
-            print("Average Instrument Family Correlation Score for \(primaryInstrumentFamilyCorrelation!): \((instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!]! + primaryInstrumentFamilyCorrelationScore!) / 2)")
+//            print("Average Instrument Family Correlation Score for \(primaryInstrumentFamilyCorrelation!): \((instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!]! + primaryInstrumentFamilyCorrelationScore!) / 2)")
             
         // otherwise just store it
         } else {
@@ -73,14 +73,14 @@ class ViewController: UIViewController {
             if stringsCorrelations[primaryInstrumentCorrelation! as! Strings] != nil {
                 stringsCorrelations[primaryInstrumentCorrelation! as! Strings] = (stringsCorrelations[primaryInstrumentCorrelation! as! Strings]! + primaryInstrumentCorrelationScore!) / 2
                 
-                print("Average Primary Instrument Correlation Score for strings: \((stringsCorrelations[primaryInstrumentCorrelation! as! Strings]! + primaryInstrumentCorrelationScore!) / 2)")
+//                print("Average Primary Instrument Correlation Score for strings: \((stringsCorrelations[primaryInstrumentCorrelation! as! Strings]! + primaryInstrumentCorrelationScore!) / 2)")
                 
                 // otherwise just store it
             } else {
                 stringsCorrelations[primaryInstrumentCorrelation! as! Strings] = primaryInstrumentCorrelationScore!
                 
-                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
-                print(stringsCorrelations[primaryInstrumentCorrelation! as! Strings]!)
+//                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+//                print(stringsCorrelations[primaryInstrumentCorrelation! as! Strings]!)
             }
         case .woodwinds:
             
@@ -88,14 +88,14 @@ class ViewController: UIViewController {
             if woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds] != nil {
                 woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds] = (woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]! + primaryInstrumentCorrelationScore!) / 2
                 
-                print("Average Primary Instrument Correlation Score for woodwinds: \((woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]! + primaryInstrumentCorrelationScore!) / 2)")
+//                print("Average Primary Instrument Correlation Score for woodwinds: \((woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]! + primaryInstrumentCorrelationScore!) / 2)")
                 
                 // otherwise just store it
             } else {
                 woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds] = primaryInstrumentCorrelationScore!
                 
-                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
-                print(woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]!)
+//                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+//                print(woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]!)
             }
             
         case .brass:
@@ -104,14 +104,14 @@ class ViewController: UIViewController {
             if brassCorrelations[primaryInstrumentCorrelation! as! Brass] != nil {
                 brassCorrelations[primaryInstrumentCorrelation! as! Brass] = (brassCorrelations[primaryInstrumentCorrelation! as! Brass]! + primaryInstrumentCorrelationScore!) / 2
                 
-                print("Average Primary Instrument Correlation Score for brass: \((brassCorrelations[primaryInstrumentCorrelation! as! Brass]! + primaryInstrumentCorrelationScore!) / 2)")
+//                print("Average Primary Instrument Correlation Score for brass: \((brassCorrelations[primaryInstrumentCorrelation! as! Brass]! + primaryInstrumentCorrelationScore!) / 2)")
                 
                 // otherwise just store it
             } else {
                 brassCorrelations[primaryInstrumentCorrelation! as! Brass] = primaryInstrumentCorrelationScore!
                 
-                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
-                print(brassCorrelations[primaryInstrumentCorrelation! as! Brass]!)
+//                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+//                print(brassCorrelations[primaryInstrumentCorrelation! as! Brass]!)
             }
             
         case .percussion:
@@ -120,14 +120,14 @@ class ViewController: UIViewController {
             if percussionCorrelations[primaryInstrumentCorrelation! as! Percussion] != nil {
                 percussionCorrelations[primaryInstrumentCorrelation! as! Percussion] = (percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]! + primaryInstrumentCorrelationScore!) / 2
                 
-                print("Average Primary Instrument Correlation Score for percussion: \((percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]! + primaryInstrumentCorrelationScore!) / 2)")
+//                print("Average Primary Instrument Correlation Score for percussion: \((percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]! + primaryInstrumentCorrelationScore!) / 2)")
                 
                 // otherwise just store it
             } else {
                 percussionCorrelations[primaryInstrumentCorrelation! as! Percussion] = primaryInstrumentCorrelationScore!
                 
-                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
-                print(percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]!)
+//                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+//                print(percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]!)
             }
             
         case .keyboards:
@@ -136,18 +136,19 @@ class ViewController: UIViewController {
             if keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards] != nil {
                 keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards] = (keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]! + primaryInstrumentCorrelationScore!) / 2
                 
-                print("Average Primary Instrument Correlation Score for keyboards: \((keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]! + primaryInstrumentCorrelationScore!) / 2)")
-                
+//                print("Average Primary Instrument Correlation Score for keyboards: \((keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]! + primaryInstrumentCorrelationScore!) / 2)")
+//
                 // otherwise just store it
             } else {
                 keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards] = primaryInstrumentCorrelationScore!
                 
-                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
-                print(keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]!)
+//                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+//                print(keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]!)
             }
             
         case .voice:
-            print("Voice!")
+            break
+//            print("Voice!")
         }
         
 //        correlationsLog[primaryInstrumentCorrelation!] = primaryInstrumentCorrelationScore
@@ -192,7 +193,7 @@ class ViewController: UIViewController {
                 self.loadNextQuestion()
             } else {
                 self.performSegue(withIdentifier: "showResults", sender: nil)
-                print("done!")
+//                print("done!")
             }
             
         })
@@ -219,7 +220,7 @@ class ViewController: UIViewController {
             
         case .ranged:
             
-            print("ranged question!")
+//            print("ranged question!")
             
             textQuestionsStack.alpha = 0
             sliderQuestionsStack.alpha = 1

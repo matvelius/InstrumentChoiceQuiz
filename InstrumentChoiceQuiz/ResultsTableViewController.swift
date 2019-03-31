@@ -28,6 +28,8 @@ class ResultsTableViewController: UITableViewController {
         
         print(topInstrumentFamilyCorrelation)
         
+        instrumentFamilyCorrelationLabel.text = topInstrumentFamilyCorrelation.description
+        
 //        instrumentFamilyCorrelationLabel.text = "\(topInstrumentFamilyCorrelation)"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
