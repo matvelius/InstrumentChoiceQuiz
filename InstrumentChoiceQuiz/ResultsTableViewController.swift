@@ -21,7 +21,7 @@ class ResultsTableViewController: UITableViewController {
         var topInstrumentFamilyCorrelation: InstrumentFamily = .woodwinds
         
         var topInstrumentCorrelationScore = 0
-        var topInstrumentCorrelation: Any = Percussion.drum_set
+        var topInstrumentCorrelation: String = ""
         
         for instrumentFamilyCorrelation in instrumentFamilyCorrelations {
             if instrumentFamilyCorrelation.value > topInstrumentFamilyCorrelationScore {
@@ -34,18 +34,51 @@ class ResultsTableViewController: UITableViewController {
         for (instrument, score) in stringsCorrelations {
             if score > topInstrumentCorrelationScore {
                 topInstrumentCorrelationScore = score
-                topInstrumentCorrelation = instrument
+                topInstrumentCorrelation = instrument.description
             }
+            print("current topInstrumentCorrelation = \(topInstrumentCorrelation)")
+        }
+        
+        for (instrument, score) in woodwindsCorrelations {
+            if score > topInstrumentCorrelationScore {
+                topInstrumentCorrelationScore = score
+                topInstrumentCorrelation = instrument.description
+            }
+            print("current topInstrumentCorrelation = \(topInstrumentCorrelation)")
+        }
+        
+        for (instrument, score) in brassCorrelations {
+            if score > topInstrumentCorrelationScore {
+                topInstrumentCorrelationScore = score
+                topInstrumentCorrelation = instrument.description
+            }
+            print("current topInstrumentCorrelation = \(topInstrumentCorrelation)")
+        }
+        
+        for (instrument, score) in percussionCorrelations {
+            if score > topInstrumentCorrelationScore {
+                topInstrumentCorrelationScore = score
+                topInstrumentCorrelation = instrument.description
+            }
+            print("current topInstrumentCorrelation = \(topInstrumentCorrelation)")
+        }
+        
+        for (instrument, score) in keyboardsCorrelations {
+            if score > topInstrumentCorrelationScore {
+                topInstrumentCorrelationScore = score
+                topInstrumentCorrelation = instrument.description
+            }
+            print("current topInstrumentCorrelation = \(topInstrumentCorrelation)")
         }
         
 //        print(topInstrumentFamilyCorrelation)
         
         instrumentFamilyCorrelationLabel.text = topInstrumentFamilyCorrelation.description
-        instrumentCorrelationLabel.text = topInstrumentCorrelation as? String
+        instrumentCorrelationLabel.text = topInstrumentCorrelation
         
         print("The top instrument family correlation is: \(topInstrumentFamilyCorrelation.description)")
         
-        print("The top instrument correlation is \(topInstrumentCorrelation)")
+        print("The top instrument correlation is: \(topInstrumentCorrelation)")
         
 //        instrumentFamilyCorrelationLabel.text = "\(topInstrumentFamilyCorrelation)"
         // Uncomment the following line to preserve selection between presentations
@@ -59,13 +92,30 @@ class ResultsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
     }
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath) as! EmojiTableViewCell
+//
+//        let emoji = emojis[indexPath.section][indexPath.row]
+//
+//        //        cell.textLabel?.text = "\(emoji.symbol) - \(emoji.name)"
+//        //
+//        //        cell.detailTextLabel?.text = emoji.description
+//
+//        cell.update(with: emoji)
+//
+//        cell.showsReorderControl = true
+//
+//        return cell
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
