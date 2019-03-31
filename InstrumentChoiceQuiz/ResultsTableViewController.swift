@@ -12,23 +12,40 @@ class ResultsTableViewController: UITableViewController {
 
     @IBOutlet var instrumentFamilyCorrelationLabel: UILabel!
     
+    @IBOutlet var instrumentCorrelationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var topInstrumentFamilyCorrelationScore = 0
         var topInstrumentFamilyCorrelation: InstrumentFamily = .woodwinds
         
+        var topInstrumentCorrelationScore = 0
+        var topInstrumentCorrelation: Any = Percussion.drum_set
+        
         for instrumentFamilyCorrelation in instrumentFamilyCorrelations {
             if instrumentFamilyCorrelation.value > topInstrumentFamilyCorrelationScore {
-                print(instrumentFamilyCorrelation)
+//                print(instrumentFamilyCorrelation)
                 topInstrumentFamilyCorrelation = instrumentFamilyCorrelation.key
                 topInstrumentFamilyCorrelationScore = instrumentFamilyCorrelation.value
             }
         }
         
-        print(topInstrumentFamilyCorrelation)
+        for (instrument, score) in stringsCorrelations {
+            if score > topInstrumentCorrelationScore {
+                topInstrumentCorrelationScore = score
+                topInstrumentCorrelation = instrument
+            }
+        }
+        
+//        print(topInstrumentFamilyCorrelation)
         
         instrumentFamilyCorrelationLabel.text = topInstrumentFamilyCorrelation.description
+        instrumentCorrelationLabel.text = topInstrumentCorrelation as? String
+        
+        print("The top instrument family correlation is: \(topInstrumentFamilyCorrelation.description)")
+        
+        print("The top instrument correlation is \(topInstrumentCorrelation)")
         
 //        instrumentFamilyCorrelationLabel.text = "\(topInstrumentFamilyCorrelation)"
         // Uncomment the following line to preserve selection between presentations

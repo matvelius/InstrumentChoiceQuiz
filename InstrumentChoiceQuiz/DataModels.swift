@@ -42,6 +42,7 @@ var keyboardsCorrelations = [Keyboards: Int]()
 // CATEGORIES:
 
 enum InstrumentFamily: CustomStringConvertible {
+    
     case strings, woodwinds, brass, percussion, keyboards, voice
     
     var description: String {
@@ -54,34 +55,118 @@ enum InstrumentFamily: CustomStringConvertible {
         case .voice: return "voice"
         }
     }
+    
 }
 
-enum Strings {
+enum Strings: CustomStringConvertible {
+    
     case violin, viola, cello, bass, harp, guitar, ukulele, banjo
+    
+    var description: String {
+        switch self {
+        case .violin: return "violin"
+        case .viola: return "viola"
+        case .cello: return "cello"
+        case .bass: return "bass"
+        case .harp: return "harp"
+        case .guitar: return "guitar"
+        case .ukulele: return "ukulele"
+        case .banjo: return "banjo"
+        }
+    }
 }
 
-enum Woodwinds {
+enum Woodwinds: CustomStringConvertible {
+    
     case flute, oboe, english_horn, bassoon, recorder, clarinet, saxophone
+    
+    var description: String {
+        switch self {
+        case .flute: return "flute"
+        case .oboe: return "oboe"
+        case .english_horn: return "english horn"
+        case .bassoon: return "bassoon"
+        case .recorder: return "recorder"
+        case .clarinet: return "clarinet"
+        case .saxophone: return "saxophone"
+        }
+    }
+    
 }
 
-enum Brass {
+enum Brass: CustomStringConvertible {
+    
     case trumpet, trombone, euphonium, tuba, french_horn
+    
+    var description: String {
+        switch self {
+        case .trumpet: return "trumpet"
+        case .trombone: return "trombone"
+        case .euphonium: return "euphonium"
+        case .tuba: return "tuba"
+        case .french_horn: return "french horn"
+        }
+    }
 }
 
-enum Percussion {
+enum Percussion: CustomStringConvertible {
+    
     case drum_set, orchestral_percussion
+    
+    var description: String {
+        switch self {
+        case .drum_set: return "drum set"
+        case .orchestral_percussion: return "orchestral percussion"
+        }
+    }
+    
 }
 
-enum Keyboards {
+enum Keyboards: CustomStringConvertible {
+    
     case piano, harpsichord, organ, synthesizer
+    
+    var description: String {
+        switch self {
+        case .piano: return "piano"
+        case .harpsichord: return "harpsichord"
+        case .organ: return "organ"
+        case .synthesizer: return "synthesizer"
+        }
+    }
+    
 }
 
-enum Genre {
+enum Genre: CustomStringConvertible {
+    
     case classical, pop, rock, hip_hop, blues, jazz, electronic, country, folk
+    
+    var description: String {
+        switch self {
+        case .classical: return "classical"
+        case .pop: return "pop"
+        case .rock: return "rock"
+        case .hip_hop: return "hip hop"
+        case .blues: return "blues"
+        case .jazz: return "jazz"
+        case .electronic: return "electronic"
+        case .country: return "country"
+        case .folk: return "folk"
+        }
+    }
 }
 
-enum Participation {
+enum Participation: CustomStringConvertible {
+    
     case solo, smallGroup, largeEnsemble
+    
+    var description: String {
+        switch self {
+        case .solo: return "solo"
+        case .smallGroup: return "small group"
+        case .largeEnsemble: return "large ensemble"
+        }
+    }
 }
 
 // GIVE WEIGHT TO PARAMETERS FOR EACH ANSWER
