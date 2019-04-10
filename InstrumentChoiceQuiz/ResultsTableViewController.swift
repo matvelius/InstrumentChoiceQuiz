@@ -14,7 +14,9 @@ class ResultsTableViewController: UITableViewController {
     
     @IBOutlet var instrumentCorrelationLabel: UILabel!
     
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         var topInstrumentFamilyCorrelationScore = 0

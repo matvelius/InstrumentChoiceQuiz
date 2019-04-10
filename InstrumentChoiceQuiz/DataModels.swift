@@ -47,7 +47,7 @@ enum InstrumentFamily: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .strings: return "string"
+        case .strings: return "strings"
         case .woodwinds: return "woodwind"
         case .brass: return "brass"
         case .percussion: return "percussion"
