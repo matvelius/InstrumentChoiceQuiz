@@ -70,7 +70,7 @@ class ResultsTableViewController: UITableViewController {
                 topInstrumentCorrelationScore = score
                 topInstrumentCorrelation = instrument.description
             }
-            print("current topInstrumentCorrelation = \(topInstrumentCorrelation)")
+            print("current topInstrumentCorrelation = \(topInstrumentCorrelation) with score \(topInstrumentCorrelationScore)")
         }
         
 //        print(topInstrumentFamilyCorrelation)
@@ -80,7 +80,7 @@ class ResultsTableViewController: UITableViewController {
         
         print("The top instrument family correlation is: \(topInstrumentFamilyCorrelation.description)")
         
-        print("The top instrument correlation is: \(topInstrumentCorrelation)")
+        print("The top instrument correlation is: \(topInstrumentCorrelation) with score \(topInstrumentCorrelationScore)")
         
 //        instrumentFamilyCorrelationLabel.text = "\(topInstrumentFamilyCorrelation)"
         // Uncomment the following line to preserve selection between presentations

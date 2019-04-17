@@ -29,7 +29,48 @@ class ViewController: UIViewController {
     }
     
     @IBAction func submitButtonForSliders(_ sender: UIButton) {
-//        print("slider question submitted!")
+    
+        var primaryGenreCorrelation: Genre
+        var primaryGenreCorrelationScore: Int
+        
+        
+        // calculate correlation score for each of the 4 sliders
+        // store results in appropriate arrays
+        
+        for (currentSliderNumber, slider) in sliderOutletCollection.enumerated() {
+            
+            if slider.value > 0 {
+                
+                primaryGenreCorrelation = questions[questionIndex].answers[currentSliderNumber].rightSideMeaning as! Genre
+                primaryGenreCorrelationScore = Int(round(slider.value))
+                
+                // average out if the correlation is already stored
+                if genresCorrelations[primaryGenreCorrelation] != nil {
+                    genresCorrelations[primaryGenreCorrelation] = (genresCorrelations[primaryGenreCorrelation]! + primaryGenreCorrelationScore) / 2
+                // otherwise just store it
+                } else {
+                    genresCorrelations[primaryGenreCorrelation] = primaryGenreCorrelationScore
+                }
+                print("Adding \(primaryGenreCorrelation) correlation with score \(primaryGenreCorrelationScore)")
+                
+            } else if slider.value < 0 {
+                
+                primaryGenreCorrelation = questions[questionIndex].answers[currentSliderNumber].rightSideMeaning as! Genre
+                primaryGenreCorrelationScore = Int(round(abs(slider.value)))
+                
+                if genresCorrelations[primaryGenreCorrelation] != nil {
+                    genresCorrelations[primaryGenreCorrelation] = (genresCorrelations[primaryGenreCorrelation]! + primaryGenreCorrelationScore) / 2
+                    // otherwise just store it
+                } else {
+                    genresCorrelations[primaryGenreCorrelation] = primaryGenreCorrelationScore
+                }
+                print("Adding \(primaryGenreCorrelation) correlation with score \(primaryGenreCorrelationScore)")
+                
+            } // ignoring 0
+            
+        }
+        
+        print(genresCorrelations)
         nextQuestionOrDone()
     }
     
@@ -43,6 +84,13 @@ class ViewController: UIViewController {
         // fill radio button to show selected choice
         let image = UIImage(named: "radio_button_selected")
         sender.setImage(image, for: UIControl.State.normal)
+        
+        // register the genre response
+        if let primaryGenreCorrelation = questions[questionIndex].answers[sender.tag].primaryGenre {
+        
+            print("Current genre correlation:" + primaryGenreCorrelation.description)
+        
+        }
         
         // register the instrument family response
         let primaryInstrumentFamilyCorrelation = questions[questionIndex].answers[sender.tag].primaryInstrumentFamily
@@ -177,9 +225,11 @@ class ViewController: UIViewController {
     var questionIndex = 0
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         loadNextQuestion()
+        
     }
     
     func nextQuestionOrDone() {
@@ -188,20 +238,21 @@ class ViewController: UIViewController {
             
             // check if we've run out of questions yet
             if self.questionIndex < questions.endIndex - 1 {
+                
                 self.questionIndex += 1
                 self.resetRadioButtons()
                 self.loadNextQuestion()
+                
             } else {
+                
                 self.performSegue(withIdentifier: "showResults", sender: nil)
-//                print("done!")
+
             }
             
         })
     }
     
     func loadNextQuestion() {
-        
-//        print("endIndex: \(questions.endIndex), questionIndex: \(questionIndex)")
         
         // set the question label
         questionLabel.text = questions[questionIndex].text
@@ -219,8 +270,6 @@ class ViewController: UIViewController {
             }
             
         case .ranged:
-            
-//            print("ranged question!")
             
             textQuestionsStack.alpha = 0
             sliderQuestionsStack.alpha = 1
@@ -240,12 +289,16 @@ class ViewController: UIViewController {
     }
     
     func resetRadioButtons() {
+        
         for radioButton in radioButtonsOutletCollection {
+            
             let image = UIImage(named: "radio_button")
             radioButton.setImage(image, for: UIControl.State.normal)
+            
         }
+        
     }
-
     
+
     
 }

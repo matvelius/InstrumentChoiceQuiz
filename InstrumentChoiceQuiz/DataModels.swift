@@ -38,6 +38,8 @@ var woodwindsCorrelations = [Woodwinds: Int]()
 var brassCorrelations = [Brass: Int]()
 var percussionCorrelations = [Percussion: Int]()
 var keyboardsCorrelations = [Keyboards: Int]()
+var genresCorrelations = [Genre: Int]()
+var participationCorrelations = [Participation: Int]()
 
 // CATEGORIES:
 
@@ -142,7 +144,9 @@ enum Genre: CustomStringConvertible {
     case classical, pop, rock, hip_hop, blues, jazz, electronic, country, folk
     
     var description: String {
+        
         switch self {
+            
         case .classical: return "classical"
         case .pop: return "pop"
         case .rock: return "rock"
@@ -152,9 +156,13 @@ enum Genre: CustomStringConvertible {
         case .electronic: return "electronic"
         case .country: return "country"
         case .folk: return "folk"
+            
         }
     }
 }
+
+// there should be a genre recommendation in the results
+// preferred genres should affect the scores of various instruments
 
 enum Participation: CustomStringConvertible {
     
@@ -168,6 +176,8 @@ enum Participation: CustomStringConvertible {
         }
     }
 }
+
+// preferred participation should be in the results and should affect scores of instruments
 
 // GIVE WEIGHT TO PARAMETERS FOR EACH ANSWER
 // CALCULATE CORRELATION LATER
