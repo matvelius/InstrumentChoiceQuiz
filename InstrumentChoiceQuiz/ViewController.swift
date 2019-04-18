@@ -23,11 +23,11 @@ class ViewController: UIViewController {
     
     @IBAction func sliderMoved(_ slider: UISlider) {
         
-//        print(slider.tag)
-//        print(slider.value)
-        
+// I DON'T THINK I NEED THIS
     }
     
+    
+    // DEAL WITH SLIDER QUESTION
     @IBAction func submitButtonForSliders(_ sender: UIButton) {
     
         var primaryGenreCorrelation: Genre
@@ -88,7 +88,19 @@ class ViewController: UIViewController {
         // register the genre response
         if let primaryGenreCorrelation = questions[questionIndex].answers[sender.tag].primaryGenre {
         
-            print("Current genre correlation:" + primaryGenreCorrelation.description)
+//            print("Current genre correlation:" + primaryGenreCorrelation.description)
+            
+            
+            let primaryGenreCorrelationScore = questions[questionIndex].answers[sender.tag].primaryGenreScore
+            
+            // average out if the correlation is already stored
+            if genresCorrelations[primaryGenreCorrelation] != nil {
+                genresCorrelations[primaryGenreCorrelation] = (genresCorrelations[primaryGenreCorrelation]! + primaryGenreCorrelationScore!) / 2
+                // otherwise just store it
+            } else {
+                genresCorrelations[primaryGenreCorrelation] = primaryGenreCorrelationScore
+            }
+            print("Adding \(primaryGenreCorrelation) correlation with score \(primaryGenreCorrelationScore)")
         
         }
         
@@ -214,6 +226,8 @@ class ViewController: UIViewController {
 //        print("the best instrument for you is \(currentInstrumentOfChoice), with the score of \(currentHighScore)" )
         
 //        print(correlationsLog)
+        
+        
         
         // keep going or finish:
         nextQuestionOrDone()

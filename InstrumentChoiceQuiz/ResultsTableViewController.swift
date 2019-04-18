@@ -14,6 +14,7 @@ class ResultsTableViewController: UITableViewController {
     
     @IBOutlet var instrumentCorrelationLabel: UILabel!
     
+    @IBOutlet weak var genresCorrelationLabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -24,6 +25,8 @@ class ResultsTableViewController: UITableViewController {
         
         var topInstrumentCorrelationScore = 0
         var topInstrumentCorrelation: String = ""
+        
+        
         
         for instrumentFamilyCorrelation in instrumentFamilyCorrelations {
             if instrumentFamilyCorrelation.value > topInstrumentFamilyCorrelationScore {
@@ -88,6 +91,49 @@ class ResultsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        var topGenreCorrelationScore = 0
+        var topGenreCorrelation: String = ""
+        
+        var secondGenreCorrelationScore = 0
+        var secondGenreCorrelation: String = ""
+        
+        var thirdGenreCorrelationScore = 0
+        var thirdGenreCorrelation: String = ""
+        
+        for (genre, score) in genresCorrelations {
+            
+            if score > topGenreCorrelationScore {
+                
+                thirdGenreCorrelationScore = secondGenreCorrelationScore
+                thirdGenreCorrelation = secondGenreCorrelation
+                
+                secondGenreCorrelationScore = topGenreCorrelationScore
+                secondGenreCorrelation = topGenreCorrelation
+                
+                topGenreCorrelationScore = score
+                topGenreCorrelation = genre.description
+                
+            } else if score > secondGenreCorrelationScore {
+                
+                thirdGenreCorrelationScore = secondGenreCorrelationScore
+                thirdGenreCorrelation = secondGenreCorrelation
+                
+                secondGenreCorrelationScore = score
+                secondGenreCorrelation = genre.description
+                
+            } else if score > thirdGenreCorrelationScore {
+                
+                thirdGenreCorrelationScore = score
+                thirdGenreCorrelation = genre.description
+                
+            }
+            
+        }
+        
+        genresCorrelationLabel.text = "\(topGenreCorrelation), \(secondGenreCorrelation), \(thirdGenreCorrelation)"
+        
+//        print("current topGenreCorrelation = \(topGenreCorrelation) with score \(topGenreCorrelationScore)")
     }
 
     // MARK: - Table view data source
@@ -99,7 +145,7 @@ class ResultsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 3
     }
     
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

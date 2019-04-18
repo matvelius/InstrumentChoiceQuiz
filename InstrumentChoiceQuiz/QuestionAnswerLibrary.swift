@@ -25,7 +25,7 @@ var questions: [Question] = [
                        primaryInstrument: Keyboards.piano,
                        primaryInstrumentScore: 7,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 4,
                        primaryParticipation: .solo,
                        primaryParticipationScore: 10
                 ), // end answer
@@ -36,7 +36,7 @@ var questions: [Question] = [
                        primaryInstrument: Strings.guitar,
                        primaryInstrumentScore: 8,
                        primaryGenre: .rock,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 9,
                        primaryParticipation: .smallGroup,
                        primaryParticipationScore: 10
                 ), // end answer
@@ -47,7 +47,7 @@ var questions: [Question] = [
                        primaryInstrument: Brass.trumpet,
                        primaryInstrumentScore: 9,
                        primaryGenre: .jazz,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 4,
                        primaryParticipation: .largeEnsemble,
                        primaryParticipationScore: 10
                 ), // end answer
@@ -58,7 +58,7 @@ var questions: [Question] = [
                        primaryInstrument: nil,
                        primaryInstrumentScore: 10,
                        primaryGenre: .pop,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 7,
                        primaryParticipation: .solo,
                        primaryParticipationScore: 10
                 ) // end answer
@@ -68,46 +68,46 @@ var questions: [Question] = [
     Question(text: "How is your attention span?",
              type: .single,
              answers: [
-                Answer(answerOption: "Excellent: I can spend hours focusing on the same task",
+                Answer(answerOption: "Excellent: I can spend hours focusing on a task",
                        primaryInstrumentFamily: .strings,
                        primaryInstrumentFamilyScore: 7,
                        primaryInstrument: Strings.violin,
                        primaryInstrumentScore: 8,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 5,
                        primaryParticipation: .largeEnsemble,
                        primaryParticipationScore: 10
                 ), // end answer
                 
-                Answer(answerOption: "Pretty good: I'm ok with repetative tasks, as long as I can switch to something different every 45 minutes to an hour",
+                Answer(answerOption: "Pretty good, as long as I can switch to something different every 45 minutes or so",
                        primaryInstrumentFamily: .woodwinds,
                        primaryInstrumentFamilyScore: 6,
                        primaryInstrument: Woodwinds.clarinet,
                        primaryInstrumentScore: 7,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 8,
                        primaryParticipation: .smallGroup,
                        primaryParticipationScore: 10
                 ), // end answer
                 
-                Answer(answerOption: "Ok: I can focus on something for about 20-30 minutes, but after that I need a break",
+                Answer(answerOption: "Ok: I can focus for about 20-30 minutes, but after that I need a break",
                        primaryInstrumentFamily: .percussion,
                        primaryInstrumentFamilyScore: 4,
                        primaryInstrument: Percussion.drum_set,
                        primaryInstrumentScore: 8,
                        primaryGenre: .jazz,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 4,
                        primaryParticipation: .smallGroup,
                        primaryParticipationScore: 10
                 ), // end answer
                 
-                Answer(answerOption: "Not great: I can pay attention for about 5 minutes, and then I need to do something else",
+                Answer(answerOption: "Not great: I can pay attention for... wait, what was the question?",
                        primaryInstrumentFamily: .strings,
                        primaryInstrumentFamilyScore: 5,
                        primaryInstrument: Strings.guitar,
                        primaryInstrumentScore: 9,
                        primaryGenre: .rock,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 1,
                        primaryParticipation: .solo,
                        primaryParticipationScore: 10
                 ) // end answer
@@ -150,9 +150,9 @@ var questions: [Question] = [
                        primaryInstrumentFamily: .keyboards,
                        primaryInstrumentFamilyScore: 6,
                        primaryInstrument: Keyboards.piano,
-                       primaryInstrumentScore: 10,
+                       primaryInstrumentScore: 6,
                        primaryGenre: .pop,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 4,
                        primaryParticipation: .solo,
                        primaryParticipationScore: 10
                 ), // end answer
@@ -163,9 +163,9 @@ var questions: [Question] = [
                        primaryInstrument: nil,
                        primaryInstrumentScore: 7,
                        primaryGenre: .rock,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 6,
                        primaryParticipation: .smallGroup,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 3
                 ), // end answer
                 
                 Answer(answerOption: "I love new experiences!",
@@ -174,20 +174,20 @@ var questions: [Question] = [
                        primaryInstrument: Brass.trombone,
                        primaryInstrumentScore: 9,
                        primaryGenre: .jazz,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 5,
                        primaryParticipation: .smallGroup,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 4
                 ), // end answer
                 
                 Answer(answerOption: "If it were possible, I'd do something new every single day!",
                        primaryInstrumentFamily: .brass,
                        primaryInstrumentFamilyScore: 6,
                        primaryInstrument: Brass.trumpet,
-                       primaryInstrumentScore: 8,
+                       primaryInstrumentScore: 7,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 7,
                        primaryParticipation: .largeEnsemble,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 4
                 ) // end answer
         ] // end of Answer array
     ), // end of current question
@@ -199,22 +199,22 @@ var questions: [Question] = [
                        primaryInstrumentFamily: .strings,
                        primaryInstrumentFamilyScore: 8,
                        primaryInstrument: Strings.viola,
-                       primaryInstrumentScore: 10,
+                       primaryInstrumentScore: 4,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 5,
                        primaryParticipation: .largeEnsemble,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 6
                 ), // end answer
                 
                 Answer(answerOption: "I like to laugh, but no one ever laughs at my jokes",
                        primaryInstrumentFamily: .strings,
                        primaryInstrumentFamilyScore: 7,
                        primaryInstrument: Strings.bass,
-                       primaryInstrumentScore: 9,
+                       primaryInstrumentScore: 5,
                        primaryGenre: .rock,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 3,
                        primaryParticipation: .smallGroup,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 4
                 ), // end answer
                 
                 Answer(answerOption: "I can crack a joke once in a while",
@@ -223,20 +223,20 @@ var questions: [Question] = [
                        primaryInstrument: Woodwinds.saxophone,
                        primaryInstrumentScore: 9,
                        primaryGenre: .jazz,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 4,
                        primaryParticipation: .largeEnsemble,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 6
                 ), // end answer
                 
                 Answer(answerOption: "I'm basically a stand-up comedian!",
                        primaryInstrumentFamily: .brass,
                        primaryInstrumentFamilyScore: 9,
                        primaryInstrument: Brass.trumpet,
-                       primaryInstrumentScore: 10,
+                       primaryInstrumentScore: 7,
                        primaryGenre: .jazz,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 5,
                        primaryParticipation: .largeEnsemble,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 6
                 ) // end answer
         ] // end of Answer array
     ), // end of current question
@@ -248,11 +248,11 @@ var questions: [Question] = [
                        primaryInstrumentFamily: .strings,
                        primaryInstrumentFamilyScore: 6,
                        primaryInstrument: Strings.guitar,
-                       primaryInstrumentScore: 10,
+                       primaryInstrumentScore: 6,
                        primaryGenre: .rock,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 7,
                        primaryParticipation: .smallGroup,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 5
                 ), // end answer
                 
                 Answer(answerOption: "I'll listen, but only if they're bigger than me",
@@ -261,9 +261,9 @@ var questions: [Question] = [
                        primaryInstrument: Brass.tuba,
                        primaryInstrumentScore: 7,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 5,
                        primaryParticipation: .largeEnsemble,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 4
                 ), // end answer
                 
                 Answer(answerOption: "I always respect people who are older and/or are in position of power",
@@ -272,9 +272,9 @@ var questions: [Question] = [
                        primaryInstrument: Woodwinds.oboe,
                        primaryInstrumentScore: 7,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 6,
                        primaryParticipation: .largeEnsemble,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 3
                 ), // end answer
                 
                 Answer(answerOption: "I never stand up for myself",
@@ -283,9 +283,9 @@ var questions: [Question] = [
                        primaryInstrument: Strings.cello,
                        primaryInstrumentScore: 9,
                        primaryGenre: .classical,
-                       primaryGenreScore: 10,
+                       primaryGenreScore: 4,
                        primaryParticipation: .solo,
-                       primaryParticipationScore: 10
+                       primaryParticipationScore: 5
                 ) // end answer
         ] // end of Answer array
     ), // end of current question

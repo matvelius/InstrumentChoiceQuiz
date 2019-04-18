@@ -257,6 +257,21 @@ struct Answer {
         
     }
     
+    // initializer for multiple type answers
+    init(answerOption: Any?,
+         primaryInstrumentFamily: InstrumentFamily?,
+         primaryInstrumentFamilyScore: Int?,
+         primaryInstrument: Any?,
+         primaryInstrumentScore: Int?) {
+        
+        self.answerOption = answerOption
+        self.primaryInstrumentFamily = primaryInstrumentFamily
+        self.primaryInstrumentFamilyScore = primaryInstrumentFamilyScore
+        self.primaryInstrument = primaryInstrument
+        self.primaryInstrumentScore = primaryInstrumentScore
+        
+    }
+    
     // initializer for ranged type answers
     init(leftSideLabel: String?,
          leftSideMeaning: Any?,
