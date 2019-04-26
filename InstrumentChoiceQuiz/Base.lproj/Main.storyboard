@@ -49,12 +49,6 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-nJ-UM3">
-                                                        <rect key="frame" x="667" y="0.0" width="0.0" height="56.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="SAw-b3-3mg" firstAttribute="width" secondItem="XN2-r0-jnw" secondAttribute="width" multiplier="8:1" id="nio-YU-OXX"/>
@@ -125,7 +119,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-gO-f2l" userLabel="Slider Stack">
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-gO-f2l" userLabel="Slider Stack">
                                         <rect key="frame" x="0.0" y="120" width="667" height="255"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="iVN-ge-Ces" userLabel="Slider Questions">
@@ -235,19 +229,214 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-kA-20U" userLabel="Multiple ">
+                                        <rect key="frame" x="0.0" y="120" width="667" height="255"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8fb-4w-8Vw" userLabel="multiple_left">
+                                                <rect key="frame" x="0.0" y="0.0" width="333.5" height="255"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="lNy-4O-pfA" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="0.0" width="333.5" height="64"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwS-Tc-7iI" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1o-Ez-GK9"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vh-Uz-9h4">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="mwS-Tc-7iI" firstAttribute="width" secondItem="4Vh-Uz-9h4" secondAttribute="width" multiplier="2:7" id="WJh-mP-Bux"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="Jvh-fx-GsN"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="HPZ-FD-1Mt" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="64" width="333.5" height="63.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-9x-tlK" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SKs-NE-jqx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-oR-kA2">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="yUD-9x-tlK" firstAttribute="width" secondItem="nO9-oR-kA2" secondAttribute="width" multiplier="2:7" id="sg0-uP-edm"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="G3a-pB-cZi"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-Ix-1X0" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="127.5" width="333.5" height="64"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWW-rr-6ef" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4C5-VX-Twf"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2L-ax-dnP">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="zWW-rr-6ef" firstAttribute="width" secondItem="P2L-ax-dnP" secondAttribute="width" multiplier="2:7" id="MmU-ef-a2U"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="qKF-84-lyS"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PJE-pq-dDu" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="191.5" width="333.5" height="63.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUz-yM-E13" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYK-b2-o5L"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-wU-py2">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="WUz-yM-E13" firstAttribute="width" secondItem="E5k-wU-py2" secondAttribute="width" multiplier="2:7" id="OcX-i7-DaJ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <viewLayoutGuide key="safeArea" id="Mwv-Si-8Sb"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yi5-hH-f52" userLabel="multiple_right">
+                                                <rect key="frame" x="333.5" y="0.0" width="333.5" height="255"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="I5r-uG-jD1" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="0.0" width="333.5" height="64"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-Lt-SVU" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ha-aP-j6I"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-7M-mpK">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="mEQ-Lt-SVU" firstAttribute="width" secondItem="kON-7M-mpK" secondAttribute="width" multiplier="2:7" id="bA2-dj-MnD"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="ZB8-vz-Igd"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-pa-1pq" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="64" width="333.5" height="63.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY8-zR-EfS" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsB-UU-fxX"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZt-jG-JM1">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="NY8-zR-EfS" firstAttribute="width" secondItem="NZt-jG-JM1" secondAttribute="width" multiplier="2:7" id="Hkj-ii-PzR"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="rUS-Es-Gya"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Qox-QH-hMT" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="127.5" width="333.5" height="64"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="7" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYH-f1-ulq" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gNf-Bp-2Py"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7g-26-hAX">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="MYH-f1-ulq" firstAttribute="width" secondItem="l7g-26-hAX" secondAttribute="width" multiplier="2:7" id="Ld4-t8-FWn"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="fse-0P-kki"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="oY4-6c-Ohm" userLabel="option">
+                                                        <rect key="frame" x="0.0" y="191.5" width="333.5" height="63.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="8" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-lx-JPo" userLabel="checkbox">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
+                                                                <state key="normal" image="checkbox"/>
+                                                                <connections>
+                                                                    <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="de3-Oq-QLB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-S7-cm3">
+                                                                <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="ZbU-lx-JPo" firstAttribute="width" secondItem="2Vh-S7-cm3" secondAttribute="width" multiplier="2:7" id="4aP-2D-sRM"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <viewLayoutGuide key="safeArea" id="XBm-vC-bUJ"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="cN2-gO-f2l" firstAttribute="top" secondItem="xMl-fj-U1g" secondAttribute="bottom" constant="45" id="7oY-iU-VnR"/>
+                                    <constraint firstItem="OIi-kA-20U" firstAttribute="top" secondItem="xMl-fj-U1g" secondAttribute="bottom" constant="45" id="B9m-Me-Pvl"/>
                                     <constraint firstItem="Zk7-fA-KEu" firstAttribute="bottom" secondItem="vmi-hh-4YV" secondAttribute="bottom" constant="30" id="FPc-o3-EZX"/>
                                     <constraint firstItem="cN2-gO-f2l" firstAttribute="leading" secondItem="Zk7-fA-KEu" secondAttribute="leading" id="MHl-2R-eo5"/>
                                     <constraint firstItem="vmi-hh-4YV" firstAttribute="top" secondItem="xMl-fj-U1g" secondAttribute="bottom" constant="45" id="O0s-Qx-vqd"/>
                                     <constraint firstItem="Zk7-fA-KEu" firstAttribute="trailing" secondItem="vmi-hh-4YV" secondAttribute="trailing" id="OiP-mT-8aN"/>
                                     <constraint firstItem="Zk7-fA-KEu" firstAttribute="trailing" secondItem="cN2-gO-f2l" secondAttribute="trailing" id="PA3-UY-4Sj"/>
+                                    <constraint firstItem="OIi-kA-20U" firstAttribute="leading" secondItem="Zk7-fA-KEu" secondAttribute="leading" id="QO5-c8-QyJ"/>
+                                    <constraint firstItem="OIi-kA-20U" firstAttribute="bottom" secondItem="Zk7-fA-KEu" secondAttribute="bottom" id="Vqm-B4-uV0"/>
                                     <constraint firstItem="xMl-fj-U1g" firstAttribute="centerX" secondItem="NEt-rc-2rW" secondAttribute="centerX" id="hfj-wi-uO0"/>
                                     <constraint firstItem="Zk7-fA-KEu" firstAttribute="bottom" secondItem="cN2-gO-f2l" secondAttribute="bottom" id="l8z-jQ-KLN"/>
                                     <constraint firstItem="xMl-fj-U1g" firstAttribute="top" secondItem="Zk7-fA-KEu" secondAttribute="top" constant="45" id="l9x-Fs-4ya"/>
                                     <constraint firstItem="vmi-hh-4YV" firstAttribute="leading" secondItem="Zk7-fA-KEu" secondAttribute="leading" id="lVS-XP-9aT"/>
+                                    <constraint firstItem="OIi-kA-20U" firstAttribute="trailing" secondItem="Zk7-fA-KEu" secondAttribute="trailing" id="r1W-mk-YFI"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="Zk7-fA-KEu"/>
                             </view>
@@ -285,6 +474,22 @@
                         <outletCollection property="leftLabelOutletCollection" destination="qlc-6W-6M3" collectionClass="NSMutableArray" id="GYS-fl-wEH"/>
                         <outletCollection property="leftLabelOutletCollection" destination="W3b-lu-ZjO" collectionClass="NSMutableArray" id="R3D-7I-gGd"/>
                         <outletCollection property="sliderOutletCollection" destination="idS-Ov-9X0" collectionClass="NSMutableArray" id="YGy-6B-Xln"/>
+                        <outletCollection property="checkboxOutletCollection" destination="mwS-Tc-7iI" collectionClass="NSMutableArray" id="GA2-Z7-Zjr"/>
+                        <outletCollection property="checkboxOutletCollection" destination="yUD-9x-tlK" collectionClass="NSMutableArray" id="cNY-a7-f1c"/>
+                        <outletCollection property="checkboxOutletCollection" destination="zWW-rr-6ef" collectionClass="NSMutableArray" id="94o-mk-I8r"/>
+                        <outletCollection property="checkboxOutletCollection" destination="WUz-yM-E13" collectionClass="NSMutableArray" id="XaV-Y3-Kk6"/>
+                        <outletCollection property="checkboxOutletCollection" destination="mEQ-Lt-SVU" collectionClass="NSMutableArray" id="gzV-L3-V0c"/>
+                        <outletCollection property="checkboxOutletCollection" destination="NY8-zR-EfS" collectionClass="NSMutableArray" id="AcI-A2-bjO"/>
+                        <outletCollection property="checkboxOutletCollection" destination="MYH-f1-ulq" collectionClass="NSMutableArray" id="wTM-lf-yvH"/>
+                        <outletCollection property="checkboxOutletCollection" destination="ZbU-lx-JPo" collectionClass="NSMutableArray" id="o1p-O7-sSZ"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="4Vh-Uz-9h4" collectionClass="NSMutableArray" id="TNa-PF-Rka"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="nO9-oR-kA2" collectionClass="NSMutableArray" id="5Im-Fo-qsT"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="P2L-ax-dnP" collectionClass="NSMutableArray" id="uL0-K8-nxi"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="E5k-wU-py2" collectionClass="NSMutableArray" id="p6T-EI-G19"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="kON-7M-mpK" collectionClass="NSMutableArray" id="YOF-tQ-Q2x"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="NZt-jG-JM1" collectionClass="NSMutableArray" id="yS0-TE-U8H"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="l7g-26-hAX" collectionClass="NSMutableArray" id="w4D-Uu-fDT"/>
+                        <outletCollection property="checkboxLabelOutletCollection" destination="2Vh-S7-cm3" collectionClass="NSMutableArray" id="oWV-Xz-hBg"/>
                         <segue destination="NNJ-wK-WEo" kind="show" identifier="showResults" id="s89-3d-Ldd"/>
                     </connections>
                 </viewController>
@@ -484,6 +689,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkbox" width="55" height="55"/>
         <image name="radio_button" width="57" height="57"/>
     </resources>
 </document>

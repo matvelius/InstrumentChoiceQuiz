@@ -9,11 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var questionLabel: UILabel!
 
     @IBOutlet var radioButtonsOutletCollection: [UIButton]!
     
     @IBOutlet var answerTextOutletCollection: [UILabel]!
+    
+    
+    @IBOutlet var checkboxOutletCollection: [UIButton]!
+    
+    @IBAction func checkboxChecked(_ sender: UIButton) {
+    }
+    
+    @IBOutlet var checkboxLabelOutletCollection: [UILabel]!
     
     @IBOutlet var leftLabelOutletCollection: [UILabel]!
     
