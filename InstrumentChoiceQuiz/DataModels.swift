@@ -141,7 +141,7 @@ enum Keyboards: CustomStringConvertible {
 
 enum Genre: CustomStringConvertible {
     
-    case classical, pop, rock, hip_hop, blues, jazz, electronic, country, folk
+    case classical, pop, rock, hip_hop, blues, jazz, electronic, country, folk, reggae
     
     var description: String {
         
@@ -156,6 +156,7 @@ enum Genre: CustomStringConvertible {
         case .electronic: return "electronic"
         case .country: return "country"
         case .folk: return "folk"
+        case .reggae: return "reggae"
             
         }
     }
@@ -262,13 +263,17 @@ struct Answer {
          primaryInstrumentFamily: InstrumentFamily?,
          primaryInstrumentFamilyScore: Int?,
          primaryInstrument: Any?,
-         primaryInstrumentScore: Int?) {
+         primaryInstrumentScore: Int?,
+         primaryGenre: Genre?,
+         primaryGenreScore: Int?) {
         
         self.answerOption = answerOption
         self.primaryInstrumentFamily = primaryInstrumentFamily
         self.primaryInstrumentFamilyScore = primaryInstrumentFamilyScore
         self.primaryInstrument = primaryInstrument
         self.primaryInstrumentScore = primaryInstrumentScore
+        self.primaryGenre = primaryGenre
+        self.primaryGenreScore = primaryGenreScore
         
     }
     
