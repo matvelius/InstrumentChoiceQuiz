@@ -30,7 +30,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-hh-4YV" userLabel="Text Questions">
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-hh-4YV" userLabel="Text Questions">
                                         <rect key="frame" x="0.0" y="120" width="667" height="255"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Tev-h0-F5q" userLabel="qn 1">
@@ -229,7 +229,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-kA-20U" userLabel="Multiple Stack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-kA-20U" userLabel="Multiple Stack">
                                         <rect key="frame" x="0.0" y="85" width="667" height="290"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-qu-LZ4" userLabel="checkboxes &amp; labels">
@@ -241,14 +241,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="lNy-4O-pfA" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="0.0" width="333.5" height="64"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwS-Tc-7iI" userLabel="checkbox">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwS-Tc-7iI" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1o-Ez-GK9"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vh-Uz-9h4">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vh-Uz-9h4">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -263,14 +263,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="HPZ-FD-1Mt" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="64" width="333.5" height="63.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-9x-tlK" userLabel="checkbox">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-9x-tlK" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SKs-NE-jqx"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-oR-kA2">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-oR-kA2">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -285,14 +285,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-Ix-1X0" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="127.5" width="333.5" height="64"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWW-rr-6ef" userLabel="checkbox">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWW-rr-6ef" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4C5-VX-Twf"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2L-ax-dnP">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2L-ax-dnP">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -307,14 +307,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PJE-pq-dDu" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="191.5" width="333.5" height="63.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUz-yM-E13" userLabel="checkbox">
+                                                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUz-yM-E13" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYK-b2-o5L"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-wU-py2">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-wU-py2">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -334,14 +334,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="I5r-uG-jD1" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="0.0" width="333.5" height="64"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-Lt-SVU" userLabel="checkbox">
+                                                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-Lt-SVU" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ha-aP-j6I"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-7M-mpK">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-7M-mpK">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -356,14 +356,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-pa-1pq" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="64" width="333.5" height="63.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY8-zR-EfS" userLabel="checkbox">
+                                                                    <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY8-zR-EfS" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VsB-UU-fxX"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZt-jG-JM1">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZt-jG-JM1">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -378,14 +378,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Qox-QH-hMT" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="127.5" width="333.5" height="64"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="7" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYH-f1-ulq" userLabel="checkbox">
+                                                                    <button opaque="NO" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYH-f1-ulq" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gNf-Bp-2Py"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7g-26-hAX">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7g-26-hAX">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -400,14 +400,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="oY4-6c-Ohm" userLabel="option">
                                                                 <rect key="frame" x="0.0" y="191.5" width="333.5" height="63.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="8" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-lx-JPo" userLabel="checkbox">
+                                                                    <button opaque="NO" tag="7" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-lx-JPo" userLabel="checkbox">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="63.5"/>
                                                                         <state key="normal" image="checkbox"/>
                                                                         <connections>
                                                                             <action selector="checkboxChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="de3-Oq-QLB"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-S7-cm3">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-S7-cm3">
                                                                         <rect key="frame" x="74" y="0.0" width="259.5" height="63.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>

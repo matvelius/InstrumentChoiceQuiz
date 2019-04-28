@@ -16,6 +16,84 @@ import UIKit
 // coordination? (high: drums, piano, strings; low: perucussion)
 
 var questions: [Question] = [
+    
+    Question(text: "Which of the following artists/composers do you enjoy listening to?",
+             type: .multiple,
+             answers: [
+                Answer(answerOption: "J.S. Bach",
+                       primaryInstrumentFamily: .keyboards,
+                       primaryInstrumentFamilyScore: 8,
+                       primaryInstrument: Keyboards.piano,
+                       primaryInstrumentScore: 8,
+                       primaryGenre: .classical,
+                       primaryGenreScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "The Beatles",
+                       primaryInstrumentFamily: .strings,
+                       primaryInstrumentFamilyScore: 5,
+                       primaryInstrument: Strings.guitar,
+                       primaryInstrumentScore: 7,
+                       primaryGenre: .rock,
+                       primaryGenreScore: 8
+                ), // end answer
+                
+                Answer(answerOption: "Kendrick Lamar",
+                       primaryInstrumentFamily: .voice,
+                       primaryInstrumentFamilyScore: 5,
+                       primaryInstrument: nil,
+                       primaryInstrumentScore: 0,
+                       primaryGenre: .hip_hop,
+                       primaryGenreScore: 9
+                ), // end answer
+                
+                Answer(answerOption: "Charlie Parker",
+                       primaryInstrumentFamily: .woodwinds,
+                       primaryInstrumentFamilyScore: 7,
+                       primaryInstrument: Woodwinds.saxophone,
+                       primaryInstrumentScore: 9,
+                       primaryGenre: .jazz,
+                       primaryGenreScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "Sia",
+                       primaryInstrumentFamily: .voice,
+                       primaryInstrumentFamilyScore: 7,
+                       primaryInstrument: nil,
+                       primaryInstrumentScore: 0,
+                       primaryGenre: .pop,
+                       primaryGenreScore: 9
+                ), // end answer
+                
+                Answer(answerOption: "AC/DC",
+                       primaryInstrumentFamily: .strings,
+                       primaryInstrumentFamilyScore: 6,
+                       primaryInstrument: Strings.guitar,
+                       primaryInstrumentScore: 8,
+                       primaryGenre: .rock,
+                       primaryGenreScore: 10
+                ), // end answer
+                
+                Answer(answerOption: "Willie Nelson",
+                       primaryInstrumentFamily: .strings,
+                       primaryInstrumentFamilyScore: 5,
+                       primaryInstrument: Strings.guitar,
+                       primaryInstrumentScore: 6,
+                       primaryGenre: .country,
+                       primaryGenreScore: 8
+                ), // end answer
+                
+                Answer(answerOption: "Bob Marley",
+                       primaryInstrumentFamily: .strings,
+                       primaryInstrumentFamilyScore: 4,
+                       primaryInstrument: Strings.bass,
+                       primaryInstrumentScore: 7,
+                       primaryGenre: .reggae,
+                       primaryGenreScore: 8
+                ), // end answer
+        ] // end of Answer array
+    ), // end of current question
+    
     Question(text: "Which of the following describes you best?",
              type: .single,
              answers: [
@@ -192,82 +270,6 @@ var questions: [Question] = [
         ] // end of Answer array
     ), // end of current question
     
-    Question(text: "Which of the following artists/composers do you enjoy listening to?",
-             type: .multiple,
-             answers: [
-                Answer(answerOption: "J.S. Bach",
-                       primaryInstrumentFamily: .keyboards,
-                       primaryInstrumentFamilyScore: 8,
-                       primaryInstrument: Keyboards.piano,
-                       primaryInstrumentScore: 8,
-                       primaryGenre: .classical,
-                       primaryGenreScore: 10
-                ), // end answer
-                
-                Answer(answerOption: "The Beatles",
-                       primaryInstrumentFamily: .strings,
-                       primaryInstrumentFamilyScore: 5,
-                       primaryInstrument: Strings.guitar,
-                       primaryInstrumentScore: 7,
-                       primaryGenre: .rock,
-                       primaryGenreScore: 8
-                ), // end answer
-                
-                Answer(answerOption: "Kendrick Lamar",
-                       primaryInstrumentFamily: .voice,
-                       primaryInstrumentFamilyScore: 5,
-                       primaryInstrument: nil,
-                       primaryInstrumentScore: 0,
-                       primaryGenre: .hip_hop,
-                       primaryGenreScore: 9
-                ), // end answer
-                
-                Answer(answerOption: "Charlie Parker",
-                       primaryInstrumentFamily: .woodwinds,
-                       primaryInstrumentFamilyScore: 7,
-                       primaryInstrument: Woodwinds.saxophone,
-                       primaryInstrumentScore: 9,
-                       primaryGenre: .jazz,
-                       primaryGenreScore: 10
-                ), // end answer
-                
-                Answer(answerOption: "Sia",
-                       primaryInstrumentFamily: .voice,
-                       primaryInstrumentFamilyScore: 7,
-                       primaryInstrument: nil,
-                       primaryInstrumentScore: 0,
-                       primaryGenre: .pop,
-                       primaryGenreScore: 9
-                ), // end answer
-                
-                Answer(answerOption: "AC/DC",
-                       primaryInstrumentFamily: .strings,
-                       primaryInstrumentFamilyScore: 6,
-                       primaryInstrument: Strings.guitar,
-                       primaryInstrumentScore: 8,
-                       primaryGenre: .rock,
-                       primaryGenreScore: 10
-                ), // end answer
-                
-                Answer(answerOption: "Willie Nelson",
-                       primaryInstrumentFamily: .strings,
-                       primaryInstrumentFamilyScore: 5,
-                       primaryInstrument: Strings.guitar,
-                       primaryInstrumentScore: 6,
-                       primaryGenre: .country,
-                       primaryGenreScore: 8
-                ), // end answer
-                
-                Answer(answerOption: "Bob Marley",
-                       primaryInstrumentFamily: .strings,
-                       primaryInstrumentFamilyScore: 4,
-                       primaryInstrument: Strings.bass,
-                       primaryInstrumentScore: 7,
-                       primaryGenre: .reggae,
-                       primaryGenreScore: 8
-                ), // end answer
-        ] // end of Answer array
-    ), // end of current question
     
     Question(text: "Do you have a good sense of humor?",
              type: .single,

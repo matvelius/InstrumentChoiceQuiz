@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     @IBAction func checkboxChecked(_ sender: UIButton) {
         
+        print("sender.tag: \(sender.tag)")
+        
         // fill radio button to show selected choice
         let image = UIImage(named: "checkbox_checked")
         sender.setImage(image, for: UIControl.State.normal)
@@ -476,7 +478,13 @@ class ViewController: UIViewController {
             multipleQuestionsStack.alpha = 1
             
             for answer in questions[questionIndex].answers.enumerated() {
-                checkboxLabelOutletCollection[answer.offset].text = answer.element.answerOption as? String
+                
+                for checkboxLabel in checkboxLabelOutletCollection {
+                    if checkboxLabel.tag == answer.offset {
+                        checkboxLabel.text = answer.element.answerOption as? String
+                    }
+                }
+
             }
             
         }
