@@ -16,13 +16,174 @@ class ViewController: UIViewController {
     
     @IBOutlet var answerTextOutletCollection: [UILabel]!
     
-    
     @IBOutlet var checkboxOutletCollection: [UIButton]!
     
     @IBAction func checkboxChecked(_ sender: UIButton) {
+        
+        // fill radio button to show selected choice
+        let image = UIImage(named: "checkbox_checked")
+        sender.setImage(image, for: UIControl.State.normal)
+        
+        // instrument family, instrument, genre
+        
+        // register the genre response
+        if let primaryGenreCorrelation = questions[questionIndex].answers[sender.tag].primaryGenre {
+            
+            //            print("Current genre correlation:" + primaryGenreCorrelation.description)
+            
+            
+            let primaryGenreCorrelationScore = questions[questionIndex].answers[sender.tag].primaryGenreScore
+            
+            // average out if the correlation is already stored
+            if genresCorrelations[primaryGenreCorrelation] != nil {
+                genresCorrelations[primaryGenreCorrelation] = (genresCorrelations[primaryGenreCorrelation]! + primaryGenreCorrelationScore!) / 2
+                // otherwise just store it
+            } else {
+                genresCorrelations[primaryGenreCorrelation] = primaryGenreCorrelationScore
+            }
+            print("Adding \(primaryGenreCorrelation) correlation with score \(primaryGenreCorrelationScore)")
+            
+        }
+        
+        // register the instrument family response
+        let primaryInstrumentFamilyCorrelation = questions[questionIndex].answers[sender.tag].primaryInstrumentFamily
+        
+        let primaryInstrumentFamilyCorrelationScore = questions[questionIndex].answers[sender.tag].primaryInstrumentFamilyScore
+        
+        // average out the instrument family correlation score, if it already exists
+        if instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!] != nil {
+            instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!] = (instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!]! + primaryInstrumentFamilyCorrelationScore!) / 2
+            
+            //            print("Average Instrument Family Correlation Score for \(primaryInstrumentFamilyCorrelation!): \((instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!]! + primaryInstrumentFamilyCorrelationScore!) / 2)")
+            
+            // otherwise just store it
+        } else {
+            instrumentFamilyCorrelations[primaryInstrumentFamilyCorrelation!] = primaryInstrumentFamilyCorrelationScore!
+        }
+        
+        let primaryInstrumentCorrelation = questions[questionIndex].answers[sender.tag].primaryInstrument
+        
+        let primaryInstrumentCorrelationScore = questions[questionIndex].answers[sender.tag].primaryInstrumentScore
+        
+        // choose which dictionary to store result in
+        switch primaryInstrumentFamilyCorrelation! {
+            
+        case .strings:
+            
+            // check if the correlation already exists
+            if stringsCorrelations[primaryInstrumentCorrelation! as! Strings] != nil {
+                stringsCorrelations[primaryInstrumentCorrelation! as! Strings] = (stringsCorrelations[primaryInstrumentCorrelation! as! Strings]! + primaryInstrumentCorrelationScore!) / 2
+                
+                //                print("Average Primary Instrument Correlation Score for strings: \((stringsCorrelations[primaryInstrumentCorrelation! as! Strings]! + primaryInstrumentCorrelationScore!) / 2)")
+                
+                // otherwise just store it
+            } else {
+                stringsCorrelations[primaryInstrumentCorrelation! as! Strings] = primaryInstrumentCorrelationScore!
+                
+                //                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+                //                print(stringsCorrelations[primaryInstrumentCorrelation! as! Strings]!)
+            }
+        case .woodwinds:
+            
+            // check if the correlation already exists
+            if woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds] != nil {
+                woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds] = (woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]! + primaryInstrumentCorrelationScore!) / 2
+                
+                //                print("Average Primary Instrument Correlation Score for woodwinds: \((woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]! + primaryInstrumentCorrelationScore!) / 2)")
+                
+                // otherwise just store it
+            } else {
+                woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds] = primaryInstrumentCorrelationScore!
+                
+                //                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+                //                print(woodwindsCorrelations[primaryInstrumentCorrelation! as! Woodwinds]!)
+            }
+            
+        case .brass:
+            
+            // check if the correlation already exists
+            if brassCorrelations[primaryInstrumentCorrelation! as! Brass] != nil {
+                brassCorrelations[primaryInstrumentCorrelation! as! Brass] = (brassCorrelations[primaryInstrumentCorrelation! as! Brass]! + primaryInstrumentCorrelationScore!) / 2
+                
+                //                print("Average Primary Instrument Correlation Score for brass: \((brassCorrelations[primaryInstrumentCorrelation! as! Brass]! + primaryInstrumentCorrelationScore!) / 2)")
+                
+                // otherwise just store it
+            } else {
+                brassCorrelations[primaryInstrumentCorrelation! as! Brass] = primaryInstrumentCorrelationScore!
+                
+                //                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+                //                print(brassCorrelations[primaryInstrumentCorrelation! as! Brass]!)
+            }
+            
+        case .percussion:
+            
+            // check if the correlation already exists
+            if percussionCorrelations[primaryInstrumentCorrelation! as! Percussion] != nil {
+                percussionCorrelations[primaryInstrumentCorrelation! as! Percussion] = (percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]! + primaryInstrumentCorrelationScore!) / 2
+                
+                //                print("Average Primary Instrument Correlation Score for percussion: \((percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]! + primaryInstrumentCorrelationScore!) / 2)")
+                
+                // otherwise just store it
+            } else {
+                percussionCorrelations[primaryInstrumentCorrelation! as! Percussion] = primaryInstrumentCorrelationScore!
+                
+                //                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+                //                print(percussionCorrelations[primaryInstrumentCorrelation! as! Percussion]!)
+            }
+            
+        case .keyboards:
+            
+            // check if the correlation already exists
+            if keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards] != nil {
+                keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards] = (keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]! + primaryInstrumentCorrelationScore!) / 2
+                
+                //                print("Average Primary Instrument Correlation Score for keyboards: \((keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]! + primaryInstrumentCorrelationScore!) / 2)")
+                //
+                // otherwise just store it
+            } else {
+                keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards] = primaryInstrumentCorrelationScore!
+                
+                //                print("Primary Instrument Correlation Score for \(primaryInstrumentCorrelation!):")
+                //                print(keyboardsCorrelations[primaryInstrumentCorrelation! as! Keyboards]!)
+            }
+            
+        case .voice:
+            break
+            //            print("Voice!")
+        }
+        
+        //        correlationsLog[primaryInstrumentCorrelation!] = primaryInstrumentCorrelationScore
+        
+        //        var currentHighScore = 0
+        //        var currentInstrumentOfChoice = "piano"
+        //        for (instrument, score) in correlationsLog {
+        //
+        //            if score > currentHighScore {
+        //                currentHighScore = score
+        //                currentInstrumentOfChoice = "\(instrument)"
+        //            }
+        //        }
+        //
+        //        print("the best instrument for you is \(currentInstrumentOfChoice), with the score of \(currentHighScore)" )
+        
+        //        print(correlationsLog)
+        
+        
+        
+        // keep going or finish:
+        
+        
+        
     }
     
     @IBOutlet var checkboxLabelOutletCollection: [UILabel]!
+    
+    
+    @IBAction func submitButtonForCheckboxes(_ sender: UIButton) {
+        
+        nextQuestionOrDone()
+        
+    }
     
     @IBOutlet var leftLabelOutletCollection: [UILabel]!
     
@@ -87,6 +248,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sliderQuestionsStack: UIStackView!
 
+    @IBOutlet weak var multipleQuestionsStack: UIStackView!
     
     @IBAction func radioButtonPressed(_ sender: UIButton) {
         
@@ -287,6 +449,7 @@ class ViewController: UIViewController {
             
             textQuestionsStack.alpha = 1
             sliderQuestionsStack.alpha = 0
+            multipleQuestionsStack.alpha = 0
         
             for answer in questions[questionIndex].answers.enumerated() {
                 answerTextOutletCollection[answer.offset].text = answer.element.answerOption as? String
@@ -296,6 +459,7 @@ class ViewController: UIViewController {
             
             textQuestionsStack.alpha = 0
             sliderQuestionsStack.alpha = 1
+            multipleQuestionsStack.alpha = 0
             
             for leftChoice in questions[questionIndex].answers.enumerated() {
                 leftLabelOutletCollection[leftChoice.offset].text = leftChoice.element.leftSideLabel
@@ -305,7 +469,15 @@ class ViewController: UIViewController {
                 rightLabelOutletCollection[rightChoice.offset].text = rightChoice.element.rightSideLabel
             }
             
-        case .multiple: break
+        case .multiple:
+            
+            textQuestionsStack.alpha = 0
+            sliderQuestionsStack.alpha = 0
+            multipleQuestionsStack.alpha = 1
+            
+            for answer in questions[questionIndex].answers.enumerated() {
+                checkboxLabelOutletCollection[answer.offset].text = answer.element.answerOption as? String
+            }
             
         }
         
