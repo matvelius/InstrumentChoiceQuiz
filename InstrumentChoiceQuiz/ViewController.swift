@@ -477,6 +477,10 @@ class ViewController: UIViewController {
             sliderQuestionsStack.alpha = 0
             multipleQuestionsStack.alpha = 1
             
+            // the proper way to sort an outlet collection:
+            // btnCollection = btnCollection.sorted(by: { $0.tag < $1.tag})
+            
+            
             for answer in questions[questionIndex].answers.enumerated() {
                 
                 for checkboxLabel in checkboxLabelOutletCollection {
